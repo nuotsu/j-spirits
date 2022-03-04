@@ -22,9 +22,25 @@ export default {
 			name: 'blocks',
 			type: 'array',
 			of: [
-				// { type: 'string' }
+				{ type: 'roster' }
 			],
 			group: 'content',
+		},
+		{
+			name: 'seo',
+			title: 'SEO',
+			type: 'object',
+			fields: [
+				{ name: 'title', title: 'Meta title', type: 'localeString', },
+				{
+					name: 'description',
+					title: 'Meta description',
+					type: 'text',
+					rows: 3,
+					validation: Rule => Rule.max(160).warning('Recommendation: <160 characters'),
+				},
+			],
+			group: 'settings',
 		},
 	],
 	preview: {

@@ -11,6 +11,9 @@ import player from './documents/player'
 import { localeString } from './objects/locales'
 import { internalLink, externalLink } from './objects/links'
 
+// blocks
+import roster from './blocks/roster'
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
@@ -23,5 +26,8 @@ export default createSchema({
     // objects
     localeString,
     internalLink, externalLink,
+
+    // blocks
+    roster,
   ]),
 })

@@ -1,10 +1,12 @@
-<Header/>
+<div class="flex flex-col min-h-screen">
+	<Header/>
 
-<main>
-	<slot></slot>
-</main>
+	<main class="flex-grow">
+		<slot></slot>
+	</main>
 
-<Footer/>
+	<Footer/>
+</div>
 
 <script>
 	import Header from '$lib/Header.svelte'
@@ -40,10 +42,13 @@
 			}
 		`)
 
+		const roster = await client.fetch(`*[_type == 'player'] | order(jersey asc)`)
+
 		return {
 			stuff: {
 				header,
 				footer,
+				roster,
 			}
 		}
 	}

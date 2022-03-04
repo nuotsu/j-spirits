@@ -1,7 +1,12 @@
-<h1>{t(page.title, $l)}</h1>
+<SEO {...page.seo}/>
+
+{#each (page.blocks || []) as block}
+	<Block {...block} />
+{/each}
 
 <script>
-	import { t, l } from '$utils/locales'
+	import SEO from '$lib/SEO.svelte'
+	import Block from '$lib/Block.svelte'
 
 	export let page
 </script>

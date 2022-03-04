@@ -1,6 +1,6 @@
 <header class="sticky top-0">
 	<a href="/">
-		Home
+		<Logo.Dark height={60} />
 	</a>
 
 	<nav>
@@ -21,6 +21,7 @@
 <script>
 	import { page } from '$app/stores'
 	import { t, l } from '$utils/locales'
+	import Logo from '$lib/logo'
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte'
 
 	let { header } = $page.stuff

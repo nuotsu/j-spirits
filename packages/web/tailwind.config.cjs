@@ -7,6 +7,7 @@ module.exports = {
 				'j-green-light': '#2e725e',
 				'j-green-dark': '#112a21',
 				'j-red': '#ee2f66',
+				'ground': '#fff7ef',
 			}
 		},
 	},

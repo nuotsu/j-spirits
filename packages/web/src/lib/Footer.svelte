@@ -1,17 +1,19 @@
-<footer>
-	<nav>
-		<ul class="flex">
-			{#each footer.menu as link}
-				<li>
-					<a href={link.link.url}>
-						{t(link.label || link.link.title, $l)}
-					</a>
-				</li>
-			{/each}
-		</ul>
-	</nav>
+<footer class="bg-j-green text-white">
+	<div class="section">
+		<nav>
+			<ul class="flex">
+				{#each footer.menu as link}
+					<li>
+						<a href={link.link.url}>
+							{t(link.label || link.link.title, $l)}
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</nav>
 
-	<LanguageSwitcher/>
+		<LanguageSwitcher/>
+	</div>
 </footer>
 
 <script>
