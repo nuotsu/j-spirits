@@ -6,8 +6,6 @@
 	{/each}
 </select>
 
-locale: {$l}
-
 <script>
 	import { l, locales } from '$utils/locales'
 	import { browser } from '$app/env'

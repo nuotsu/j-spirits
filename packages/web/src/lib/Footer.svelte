@@ -1,0 +1,23 @@
+<footer>
+	<nav>
+		<ul class="flex">
+			{#each footer.menu as link}
+				<li>
+					<a href={link.link.url}>
+						{t(link.label || link.link.title, $l)}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</nav>
+
+	<LanguageSwitcher/>
+</footer>
+
+<script>
+	import { page } from '$app/stores'
+	import { t, l } from '$utils/locales'
+	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte'
+
+	let { footer } = $page.stuff
+</script>
