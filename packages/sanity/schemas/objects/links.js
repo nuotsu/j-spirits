@@ -16,14 +16,10 @@ export const internalLink = {
 		select: {
 			title: 'link.title',
 			label: 'label',
-			slug: 'link.slug',
 		},
-		prepare({ title, label, slug }) {
-			console.log(label)
-
+		prepare({ title, label }) {
 			return {
 				title: resolveTranslation(label || title),
-				subtitle: `/${ slug?.current || '' }`
 			};
 		},
 	},
@@ -37,4 +33,16 @@ export const externalLink = {
 		{ name: 'url', type: 'url', },
 		{ name: 'label', type: 'localeString', },
 	],
+	preview: {
+		select: {
+			title: 'label',
+			subtitle: 'url',
+		},
+		prepare({ title, subtitle }) {
+			return {
+				title: resolveTranslation(title),
+				subtitle,
+			};
+		},
+	},
 }

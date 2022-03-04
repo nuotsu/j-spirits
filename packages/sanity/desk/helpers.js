@@ -8,3 +8,16 @@ export const singleton = (title, id) =>
 				.schemaType(id)
 				.documentId(id)
 		)
+
+export const list = (title, id) =>
+	S.documentTypeListItem(id)
+		.title(title)
+
+export const group = (title, list) =>
+	S.listItem()
+		.title(title)
+		.child(
+			S.list()
+				.title(title)
+				.items(list)
+		)

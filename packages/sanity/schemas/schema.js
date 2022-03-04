@@ -3,6 +3,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // documents
 import header from './documents/header'
+import footer from './documents/footer'
 import page from './documents/page'
 import player from './documents/player'
 
@@ -15,6 +16,7 @@ export default createSchema({
   types: schemaTypes.concat([
     // documents
     header,
+    footer,
     page,
     player,
 

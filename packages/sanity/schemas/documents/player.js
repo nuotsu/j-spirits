@@ -1,8 +1,10 @@
 import React from 'react'
+import { GoJersey } from 'react-icons/go'
 
 export default {
 	name: 'player',
 	title: 'Player',
+	icon: GoJersey,
 	type: 'document',
 	liveEdit: true,
 	fields: [
