@@ -5,7 +5,7 @@
 				{#each footer.menu as link}
 					<li>
 						<a href={link.link.url}>
-							{t(link.label || link.link.title, $l)}
+							{$t(link.label || link.link.title)}
 						</a>
 					</li>
 				{/each}
@@ -18,7 +18,7 @@
 
 <script>
 	import { page } from '$app/stores'
-	import { t, l } from '$utils/locales'
+	import { t } from '$utils/locales'
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte'
 
 	let { footer } = $page.stuff

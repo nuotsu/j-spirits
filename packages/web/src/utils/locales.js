@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store'
+import { writable, derived } from 'svelte/store'
 import { browser } from '$app/env'
 
 export const locales = [
@@ -13,10 +13,12 @@ export const l = writable(browser
 	: default_locale.value
 )
 
-export const t = (translation, current) => {
+function translate(translation, current) {
 	return (
 		translation[current] ||
 		translation[default_locale.value] ||
 		'{missing translation}'
 	)
 }
+
+export const t = derived(l, $l => translation => translate(translation, $l))

@@ -8,7 +8,7 @@
 			{#each header.menu as link}
 				<li>
 					<a href={link.link.url}>
-						{t(link.label || link.link.title, $l)}
+						{$t(link.label || link.link.title)}
 					</a>
 				</li>
 			{/each}
@@ -20,7 +20,7 @@
 
 <script>
 	import { page } from '$app/stores'
-	import { t, l } from '$utils/locales'
+	import { t } from '$utils/locales'
 	import Logo from '$lib/logo'
 	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte'
 
