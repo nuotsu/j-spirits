@@ -1,11 +1,14 @@
 {#if _type === 'roster'}
-	<Roster/>
+	<Roster {...props} />
+{:else if _type === 'contactForm'}
+	<ContactForm {...props} />
 {:else}
 	<pre>_type: {_type}</pre>
 {/if}
 
 <script>
-	import Roster from '$lib/Roster.svelte'
+	import Roster from '~/lib/Roster.svelte'
+	import ContactForm from '~/lib/form/ContactForm.svelte'
 
-	export let _type
+	let { _type, ...props } = $$props
 </script>

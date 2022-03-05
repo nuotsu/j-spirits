@@ -9,8 +9,7 @@ const config = {
 		vite: {
 			resolve: {
 				alias: {
-					$lib: path.resolve('./src/lib'),
-					$utils: path.resolve('./src/utils'),
+					'~': path.resolve('./src'),
 				}
 			}
 		}

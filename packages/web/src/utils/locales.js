@@ -6,11 +6,11 @@ export const locales = [
 	{ value: 'ja', title: 'Japanese' },
 ]
 
-const default_locale = locales.find(locale => !!locale.default)
+export const default_locale = locales.find(locale => !!locale.default)
 
-export const l = writable(browser
-	? localStorage.getItem('locale')
-	: default_locale.value
+export const l = writable(
+	(browser && localStorage.getItem('locale')) ??
+	default_locale.value
 )
 
 function translate(translation, current) {

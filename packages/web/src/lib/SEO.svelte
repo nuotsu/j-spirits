@@ -4,7 +4,7 @@
 </svelte:head>
 
 <script>
-	import { t } from '$utils/locales'
+	import { t } from '~/utils/locales'
 
 	export let title, description
 </script>

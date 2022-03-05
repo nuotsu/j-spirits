@@ -7,7 +7,7 @@
 </select>
 
 <script>
-	import { l, locales } from '$utils/locales'
+	import { l, locales, default_locale } from '~/utils/locales'
 	import { browser } from '$app/env'
 
 	$: $l, browser && localStorage.setItem('locale', $l)

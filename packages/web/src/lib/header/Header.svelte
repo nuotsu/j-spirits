@@ -1,10 +1,8 @@
-<header class="sticky top-0">
-	<a href="/">
-		<Logo.Dark height={60} />
-	</a>
+<header class="sticky top-0 flex <sm:flex-col items-center justify-between px-4 sm:mb-8">
+	<Logo/>
 
 	<nav>
-		<ul class="flex">
+		<ul class="flex gap-4">
 			{#each header.menu as link}
 				<li>
 					<a href={link.link.url}>
@@ -20,9 +18,9 @@
 
 <script>
 	import { page } from '$app/stores'
-	import { t } from '$utils/locales'
-	import Logo from '$lib/logo'
-	import LanguageSwitcher from '$lib/LanguageSwitcher.svelte'
+	import { t } from '~/utils/locales'
+	import Logo from './Logo.svelte'
+	import LanguageSwitcher from '~/lib/LanguageSwitcher.svelte'
 
 	let { header } = $page.stuff
 </script>

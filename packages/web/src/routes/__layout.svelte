@@ -1,21 +1,25 @@
-<div class="flex flex-col min-h-screen">
-	<Header/>
+<Header/>
 
-	<main class="flex-grow">
-		<slot></slot>
-	</main>
+<main class="flex-grow">
+	<slot></slot>
+</main>
 
-	<Footer/>
-</div>
+<Footer/>
+
+<style>
+	:global(#app) {
+		@apply flex flex-col min-h-screen;
+	}
+</style>
 
 <script>
-	import Header from '$lib/Header.svelte'
-	import Footer from '$lib/Footer.svelte'
+	import Header from '~/lib/header/Header.svelte'
+	import Footer from '~/lib/Footer.svelte'
 	import '../app.css'
 </script>
 
 <script context="module">
-	import client from '$utils/sanity'
+	import client from '~/utils/sanity'
 
 	export async function load() {
 		const header = await client.fetch(`
@@ -44,11 +48,14 @@
 
 		const roster = await client.fetch(`*[_type == 'player'] | order(jersey asc)`)
 
+		const teams = await client.fetch(`*[_type == 'team'] | order(name.full asc)`)
+
 		return {
 			stuff: {
 				header,
 				footer,
 				roster,
+				teams,
 			}
 		}
 	}

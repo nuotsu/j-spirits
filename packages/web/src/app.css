@@ -3,13 +3,31 @@
 @tailwind utilities;
 
 @layer base {
+	:root {
+		accent-color: theme('colors.j-green-light');
+	}
+
 	body {
 		@apply bg-ground;
+	}
+
+	:focus-visible {
+		outline: 0;
+
+		@apply ring-2 ring-j-green/50;
 	}
 }
 
 @layer components {
-	.section {
-		@apply max-w-screen-xl mx-auto;
+	.action {
+		@apply bg-gradient-to-tr from-j-green to-j-green-light p-2 text-white hover:bg-j-green-light;
 	}
+
+	h1,h2,h3,h4,h5,h6 {
+		@apply first-letter:text-j-green-light font-bold;
+	}
+}
+
+@layer utilities {
+
 }
