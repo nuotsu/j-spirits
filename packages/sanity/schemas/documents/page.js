@@ -1,4 +1,4 @@
-import { resolveTranslation } from '../objects/locales'
+import { t } from '../objects/locales'
 
 export default {
 	name: 'page',
@@ -22,7 +22,8 @@ export default {
 			name: 'blocks',
 			type: 'array',
 			of: [
-				{ type: 'roster' }
+				{ type: 'roster' },
+				{ type: 'contactForm' },
 			],
 			group: 'content',
 		},

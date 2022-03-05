@@ -22,7 +22,7 @@ export const localeString = {
 	})),
 }
 
-export function resolveTranslation({ _type, ...languages }) {
+export function t({ _type, ...languages }) {
 	const { en, ...lang } = languages
 
 	return Object.values({ en, ...lang }).filter(Boolean).join` / `

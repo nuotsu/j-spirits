@@ -1,4 +1,5 @@
 import { GoJersey } from 'react-icons/go'
+import { t } from '../objects/locales'
 
 export default {
 	name: 'roster',
@@ -6,11 +7,15 @@ export default {
 	icon: GoJersey,
 	type: 'object',
 	fields: [
-		{ name: 'title', type: 'string', readOnly: true },
+		{ name: 'title', type: 'localeString' },
 	],
 	preview: {
-		prepare() {
+		select: {
+			title: 'title',
+		},
+		prepare({ title }) {
 			return {
+				title: t(title),
 				subtitle: 'Roster',
 			}
 		},

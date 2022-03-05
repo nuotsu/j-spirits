@@ -1,4 +1,4 @@
-import { resolveTranslation } from './locales'
+import { t } from './locales'
 
 export const internalLink = {
 	name: 'internalLink',
@@ -19,7 +19,7 @@ export const internalLink = {
 		},
 		prepare({ title, label }) {
 			return {
-				title: resolveTranslation(label || title),
+				title: t(label || title),
 			};
 		},
 	},
@@ -40,7 +40,7 @@ export const externalLink = {
 		},
 		prepare({ title, subtitle }) {
 			return {
-				title: resolveTranslation(title),
+				title: t(title),
 				subtitle,
 			};
 		},
