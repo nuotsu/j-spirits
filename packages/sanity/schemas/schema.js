@@ -6,6 +6,7 @@ import header from './documents/header'
 import footer from './documents/footer'
 import page from './documents/page'
 import player from './documents/player'
+import team from './documents/team'
 
 // objects
 import { localeString } from './objects/locales'
@@ -13,6 +14,7 @@ import { internalLink, externalLink } from './objects/links'
 
 // blocks
 import roster from './blocks/roster'
+import contactForm from './blocks/contactForm'
 
 export default createSchema({
   name: 'default',
@@ -22,6 +24,7 @@ export default createSchema({
     footer,
     page,
     player,
+    team,
 
     // objects
     localeString,
@@ -29,5 +32,6 @@ export default createSchema({
 
     // blocks
     roster,
+    contactForm,
   ]),
 })

@@ -9,7 +9,7 @@ export default {
 	liveEdit: true,
 	fields: [
 		{ name: 'name', type: 'string', },
-		{ name: 'jersey', type: 'string', },
+		{ name: 'jersey', type: 'number', },
 		{ name: 'position', type: 'string', },
 		{ name: 'title', type: 'string', },
 		{ name: 'bt', title: 'B/T', type: 'string', },
