@@ -6,10 +6,6 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
-		prerender: {
-			entries: ['/contact'],
-		},
-
 		vite: {
 			resolve: {
 				alias: {

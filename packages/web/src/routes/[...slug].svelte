@@ -14,6 +14,8 @@
 <script context="module">
 	import client from '~/utils/sanity'
 
+	export const prerender = true
+
 	export async function load({ params, url }) {
 		const page = await client.fetch(`*[_type == 'page' && slug.current == '${ params.slug || url.pathname }'][0]`)
 
