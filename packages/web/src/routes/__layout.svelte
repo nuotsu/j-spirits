@@ -1,3 +1,13 @@
+<svelte:head>
+	<html {lang} />
+
+	{#if $page.url.pathname === '/'}
+		<link rel="canonical" href="{$page.url.origin}/{default_locale.value}"/>
+	{:else}
+		<link rel="alternate" href={$page.url.href} hreflang={lang}/>
+	{/if}
+</svelte:head>
+
 <Header/>
 
 <main class="flex-grow">
@@ -17,6 +27,8 @@
 	import Footer from '~/lib/Footer.svelte'
 	import { page } from '$app/stores'
 	import '../app.css'
+
+	let lang = $page.params.lang || default_locale.value
 </script>
 
 <script context="module">
