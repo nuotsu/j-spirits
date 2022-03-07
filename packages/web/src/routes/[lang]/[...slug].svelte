@@ -13,16 +13,23 @@
 
 <script context="module">
 	import client from '~/utils/sanity'
+	import { locales } from '~/utils/locales'
 
 	export const prerender = true
 
-	export async function load({ params, url }) {
-		const page = await client.fetch(`*[_type == 'page' && slug.current == '${ params.slug || url.pathname }'][0]`)
+	export async function load({ params }) {
+		const { lang, slug } = params
+		const page = await client.fetch(`*[_type == 'page' && slug.current == '${ slug }'][0]`)
 
-		if (!!page) {
+		const accepted_lang = locales.map(l => l.value).includes(lang)
+
+		if (!!accepted_lang && !!page) {
 			return {
 				props: {
 					page,
+				},
+				stuff: {
+					lang,
 				}
 			}
 		}

@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store'
-import { browser } from '$app/env'
+import { page } from '$app/stores'
 
 export const locales = [
 	{ value: 'en', title: 'English', default: true },
@@ -8,10 +8,7 @@ export const locales = [
 
 export const default_locale = locales.find(locale => !!locale.default)
 
-export const l = writable(
-	(browser && localStorage.getItem('locale')) ??
-	default_locale.value
-)
+export const l = writable(default_locale.value)
 
 function translate(translation, current) {
 	return (
@@ -21,4 +18,4 @@ function translate(translation, current) {
 	)
 }
 
-export const t = derived(l, $l => translation => translate(translation, $l))
+export const t = derived(page, ({ stuff }) => translation => translate(translation, stuff.lang))

@@ -1,5 +1,3 @@
-import { t } from '../objects/locales'
-
 export default {
 	name: 'page',
 	title: 'Page',

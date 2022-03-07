@@ -15,20 +15,24 @@
 <script>
 	import Header from '~/lib/header/Header.svelte'
 	import Footer from '~/lib/Footer.svelte'
+	import { page } from '$app/stores'
 	import '../app.css'
 </script>
 
 <script context="module">
 	import client from '~/utils/sanity'
+	import { default_locale } from '~/utils/locales'
 
-	export async function load() {
+	export async function load({ params }) {
+		const { lang = default_locale.value } = params
+
 		const header = await client.fetch(`
 			*[_type == 'header'][0]{
 				menu[]{
 					...,
 					link->{
 						...,
-						'url': '/' + slug.current
+						'url': '/${ lang }/' + slug.current
 					}
 				}
 			}
@@ -40,7 +44,7 @@
 					...,
 					link->{
 						...,
-						'url': '/' + slug.current
+						'url': '/${ lang }/' + slug.current
 					}
 				}
 			}

@@ -1,4 +1,4 @@
-<a class="relative inline-block pt-4 px-4 bg-white <sm:mb-8" href="/">
+<a class="relative inline-block pt-4 px-4 bg-white <sm:mb-8" {href}>
 	<DarkLogo height={40} />
 </a>
 
@@ -18,4 +18,7 @@
 
 <script>
 	import DarkLogo from '~/lib/logo/Dark.svelte'
+	import { page } from '$app/stores'
+
+	let href = `/${ $page.params.lang || '' }`
 </script>
