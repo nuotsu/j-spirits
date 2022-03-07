@@ -2,9 +2,9 @@
 	<html {lang} />
 
 	{#if $page.url.pathname === '/'}
-		<link rel="canonical" href="{$page.url.origin}/{default_locale.value}"/>
+		<link rel="canonical" href="https://jspirits.netlify.app/{default_locale.value}"/>
 	{:else}
-		<link rel="alternate" href={$page.url.href} hreflang={lang}/>
+		<link rel="alternate" {href} hreflang={lang}/>
 	{/if}
 </svelte:head>
 
@@ -29,6 +29,7 @@
 	import '../app.css'
 
 	let lang = $page.params.lang || default_locale.value
+	let href = `https://jspirits.netlify.app${ $page.url.pathname }`
 </script>
 
 <script context="module">
