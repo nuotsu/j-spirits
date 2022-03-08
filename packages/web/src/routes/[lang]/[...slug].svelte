@@ -1,6 +1,6 @@
 <SEO {...page.seo}/>
 
-{#each (page.blocks || []) as block}
+{#each (page.blocks || []) as block (block._key)}
 	<Block {...block} />
 {/each}
 
@@ -14,8 +14,6 @@
 <script context="module">
 	import client from '~/utils/sanity'
 	import { locales } from '~/utils/locales'
-
-	export const prerender = true
 
 	export async function load({ params }) {
 		const { lang, slug } = params
