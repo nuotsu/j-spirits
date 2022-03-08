@@ -1,8 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder'
 import { singleton, list, group } from './helpers'
 import { RiLayoutTop2Line, RiLayoutBottom2Line } from 'react-icons/ri'
-import { GoJersey } from 'react-icons/go'
-import { IoBaseballOutline } from 'react-icons/io5'
 
 const AllDocuments = S.documentTypeListItems()
 	.filter(item => ![
@@ -24,8 +22,8 @@ export default () =>
 
 			S.divider(),
 
-			list('Roster', 'player').icon(GoJersey),
-			list('Teams', 'team').icon(IoBaseballOutline),
+			list('Roster', 'player'),
+			list('Teams', 'team'),
 
 			...AllDocuments,
 		])

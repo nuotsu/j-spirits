@@ -1,32 +1,36 @@
 {
-  "root": true,
-  "project": {
-    "name": "J-Spirits"
-  },
-  "api": {
-    "projectId": "qfur5xy2",
-    "dataset": "production"
-  },
-  "plugins": [
-    "@sanity/base",
-    "@sanity/default-layout",
-    "@sanity/default-login",
-    "@sanity/desk-tool",
-    "@sanity/vision"
-  ],
-  "env": {
-    "development": {
-      "plugins": []
-    }
-  },
-  "parts": [
-    {
-      "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema"
-    },
-    {
-      "name": "part:@sanity/desk-tool/structure",
-      "path": "./desk/structure"
-    }
-  ]
+	"root": true,
+	"project": {
+		"name": "J-Spirits"
+	},
+	"api": {
+		"projectId": "qfur5xy2",
+		"dataset": "production"
+	},
+	"plugins": [
+		"@sanity/base",
+		"@sanity/default-layout",
+		"@sanity/default-login",
+		"@sanity/desk-tool",
+		"@sanity/vision"
+	],
+	"env": {
+		"development": {
+			"plugins": []
+		}
+	},
+	"parts": [
+		{
+			"name": "part:@sanity/base/schema",
+			"path": "./schemas/schema"
+		},
+		{
+			"name": "part:@sanity/desk-tool/structure",
+			"path": "./desk/structure"
+		},
+		{
+			"implements": "part:@sanity/base/brand-logo",
+			"path": "./desk/Logo.jsx"
+		}
+	]
 }
