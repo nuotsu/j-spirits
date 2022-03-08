@@ -4,7 +4,7 @@
 			<ul class="flex gap-4">
 				{#each footer.menu as link}
 					<li>
-						<a href={link.link.url}>
+						<a href={$t_url(link.link.url)}>
 							{$t(link.label || link.link.title)}
 						</a>
 					</li>
@@ -22,7 +22,7 @@
 
 <script>
 	import { page } from '$app/stores'
-	import { t } from '~/utils/locales'
+	import { t, t_url } from '~/utils/locales'
 	import LanguageSwitcher from '~/lib/LanguageSwitcher.svelte'
 	import Teams from '~/lib/Teams.svelte'
 

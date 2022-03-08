@@ -37,15 +37,13 @@
 	import { default_locale } from '~/utils/locales'
 
 	export async function load({ params }) {
-		const { lang = default_locale.value } = params
-
 		const header = await client.fetch(`
 			*[_type == 'header'][0]{
 				menu[]{
 					...,
 					link->{
 						...,
-						'url': '/${ lang }/' + slug.current
+						'url': '/' + slug.current
 					}
 				}
 			}
@@ -57,7 +55,7 @@
 					...,
 					link->{
 						...,
-						'url': '/${ lang }/' + slug.current
+						'url': '/' + slug.current
 					}
 				}
 			}

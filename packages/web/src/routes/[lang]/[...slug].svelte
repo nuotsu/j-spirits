@@ -25,9 +25,6 @@
 			return {
 				props: {
 					page,
-				},
-				stuff: {
-					lang,
 				}
 			}
 		}

@@ -1,18 +1,14 @@
-<select bind:value={lang} on:change={onChange}>
-	{#if loading}
-		<option disabled>Loading...</option>
-	{:else}
-		{#each locales as {value, ...locale}}
-			<option {value} selected={locale.default}>
-				{locale.title}
-			</option>
-		{/each}
-	{/if}
+<select on:change={onChange} disabled={loading}>
+	{#each locales as {value, title}}
+		<option {value} selected={lang === value}>
+			{title}
+		</option>
+	{/each}
 </select>
 
 <script>
-	import { default_locale, locales } from '~/utils/locales'
-	import { beforeNavigate, afterNavigate, goto } from '$app/navigation'
+	import { locales, default_locale } from '~/utils/locales'
+	import { goto, beforeNavigate, afterNavigate } from '$app/navigation'
 	import { page } from '$app/stores'
 
 	$: lang = $page.params.lang || default_locale.value
@@ -22,7 +18,7 @@
 	beforeNavigate(() => loading = true)
 	afterNavigate(() => loading = false)
 
-	function onChange() {
-		goto(`/${ lang }/${ $page.params.slug || '' }`)
+	function onChange({ target }) {
+		goto(`/${ target.value }/${ $page.params.slug || '' }`)
 	}
 </script>
