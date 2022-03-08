@@ -1,5 +1,5 @@
 <footer class="bg-j-green text-white">
-	<div class="max-w-screen-xl mx-auto px-4">
+	<div class="max-w-screen-xl mx-auto p-4">
 		<nav>
 			<ul class="flex gap-4">
 				{#each footer.menu as link}
@@ -12,7 +12,7 @@
 			</ul>
 		</nav>
 
-		<LanguageSwitcher/>
+		<LanguageSwitcher className="action" />
 
 		<Teams/>
 	</div>

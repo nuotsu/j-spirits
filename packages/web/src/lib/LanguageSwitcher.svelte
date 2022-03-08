@@ -1,4 +1,4 @@
-<select on:change={onChange} disabled={loading}>
+<select class={className} on:change={onChange} disabled={loading}>
 	{#each locales as {value, title}}
 		<option {value} selected={lang === value}>
 			{title}
@@ -10,6 +10,8 @@
 	import { locales, default_locale } from '~/utils/locales'
 	import { goto, beforeNavigate, afterNavigate } from '$app/navigation'
 	import { page } from '$app/stores'
+
+	export let className
 
 	$: lang = $page.params.lang || default_locale.value
 

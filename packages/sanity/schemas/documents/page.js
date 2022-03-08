@@ -11,24 +11,26 @@ export default {
 		{
 			name: 'slug',
 			type: 'slug',
+			group: 'settings',
 			options: {
 				source: doc => doc.title.en,
 			},
-			group: 'settings',
 		},
 		{
 			name: 'blocks',
 			type: 'array',
+			group: 'content',
 			of: [
+				{ type: 'heroHome' },
 				{ type: 'roster' },
 				{ type: 'contactForm' },
 			],
-			group: 'content',
 		},
 		{
 			name: 'seo',
 			title: 'SEO',
 			type: 'object',
+			group: 'settings',
 			fields: [
 				{ name: 'title', title: 'Meta title', type: 'localeString', },
 				{
@@ -39,7 +41,6 @@ export default {
 					validation: Rule => Rule.max(160).warning('Recommendation: <160 characters'),
 				},
 			],
-			group: 'settings',
 		},
 	],
 	preview: {

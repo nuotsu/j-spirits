@@ -6,7 +6,7 @@
 
 <script>
 	import SEO from '~/lib/SEO.svelte'
-	import Block from '~/lib/Block.svelte'
+	import Block from '~/lib/blocks/Block.svelte'
 
 	export let page
 </script>

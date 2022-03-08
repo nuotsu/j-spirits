@@ -13,6 +13,7 @@ import { localeString } from './objects/locales'
 import { internalLink, externalLink } from './objects/links'
 
 // blocks
+import heroHome from './blocks/heroHome'
 import roster from './blocks/roster'
 import contactForm from './blocks/contactForm'
 
@@ -31,6 +32,7 @@ export default createSchema({
     internalLink, externalLink,
 
     // blocks
+    heroHome,
     roster,
     contactForm,
   ]),

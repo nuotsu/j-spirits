@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-netlify'
 import path from 'path'
+import preprocess from 'svelte-preprocess'
 
 const locales = ['en', 'ja']
 
@@ -24,8 +25,12 @@ const config = {
 					'~': path.resolve('./src'),
 				}
 			}
-		}
-	}
+		},
+	},
+
+	preprocess: preprocess({
+		postcss: {},
+	})
 }
 
 export default config

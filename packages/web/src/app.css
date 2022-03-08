@@ -8,26 +8,43 @@
 	}
 
 	body {
-		@apply bg-ground;
+		@apply bg-ground-light;
 	}
 
 	:focus-visible {
-		outline: 0;
+		outline-offset: 2px;
 
-		@apply ring-2 ring-j-green/50;
+		@apply outline-1 outline-dashed outline-j-green/50;
+	}
+
+	select {
+		cursor: pointer;
 	}
 }
 
 @layer components {
 	.action {
-		@apply bg-gradient-to-tr from-j-green to-j-green-light p-2 text-white hover:bg-j-green-light;
+		box-shadow: 4px 4px theme('colors.j-green-dark');
+
+		@apply j-gradient p-2;
 	}
 
-	h1,h2,h3,h4,h5,h6 {
+	.action-2 {
+		box-shadow: 4px 4px theme('colors.ground-dark');
+
+		@apply ground-gradient p-2;
+	}
+
+	.h1,.h2,.h3,.h4,.h5,.h6 {
 		@apply first-letter:text-j-green-light font-bold;
 	}
 }
 
 @layer utilities {
-
+	.j-gradient {
+		@apply bg-gradient-to-tr from-j-green to-j-green-light text-white;
+	}
+	.ground-gradient {
+		@apply bg-gradient-to-tr from-ground to-ground-light;
+	}
 }

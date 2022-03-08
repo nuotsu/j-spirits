@@ -7,7 +7,9 @@ module.exports = {
 				'j-green-light': '#2e725e',
 				'j-green-dark': '#112a21',
 				'j-red': '#ee2f66',
-				'ground': '#fff7ef',
+				'ground': '#e3d2c1',
+				'ground-light': '#fff7ef',
+				'ground-dark': '#d2bca6',
 			},
 			screens: {
 				'<sm': { max: '639px' },
