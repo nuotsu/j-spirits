@@ -1,7 +1,8 @@
-<div>
-	<h2>
+<div class="py-8 border-t border-j-green-dark flex flex-wrap items-center justify-center gap-y-4 gap-x-8">
+	<h2 class="text-center">
 		<a href="https://www.lasbl-baseball.com/" target="_blank" rel="noopener noreferrer">
-			LASBL ({$t({ en: 'Los Angeles Safety Baseball League', ja: 'ロサンゼルス軟式草野球リーグ' })})
+			<span class="text-2xl">LASBL</span>
+			<small class="block text-xs">{$t({ en: 'Los Angeles Safety Baseball League', ja: 'ロサンゼルス軟式草野球リーグ' })}</small>
 		</a>
 	</h2>
 

@@ -1,5 +1,5 @@
-<a class="relative inline-block pt-4 px-4 bg-white <sm:mb-8" {href}>
-	<DarkLogo class="<md:h-[40px]" height={60} />
+<a class="relative inline-block pt-4 px-4 bg-white <sm:mb-8 drop-shadow-sm" {href}>
+	<DarkLogo class="<md:h-[30px]" height={60} />
 </a>
 
 <style>

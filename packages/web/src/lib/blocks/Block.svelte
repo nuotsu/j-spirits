@@ -10,7 +10,7 @@
 
 <script>
 	import HeroHome from '~/lib/blocks/HeroHome.svelte'
-	import Roster from '~/lib/blocks/Roster.svelte'
+	import Roster from '~/lib/blocks/roster/Roster.svelte'
 	import ContactForm from '~/lib/forms/ContactForm.svelte'
 
 	let { _type, ...props } = $$props

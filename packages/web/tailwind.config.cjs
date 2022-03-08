@@ -2,6 +2,9 @@ module.exports = {
 	content: ['./src/**/*.{svelte,html}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: `'DM Sans', 'M PLUS Rounded 1c', sans-serif`,
+			},
 			colors: {
 				'j-green': '#1e483b',
 				'j-green-light': '#2e725e',

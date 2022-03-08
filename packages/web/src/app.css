@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,6 +22,10 @@
 	select {
 		cursor: pointer;
 	}
+
+	svg {
+		fill: currentColor;
+	}
 }
 
 @layer components {
@@ -41,6 +47,11 @@
 }
 
 @layer utilities {
+	.full-width {
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+	}
+
 	.j-gradient {
 		@apply bg-gradient-to-tr from-j-green to-j-green-light text-white;
 	}

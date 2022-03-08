@@ -1,18 +1,20 @@
 <footer class="bg-j-green text-white">
-	<div class="max-w-screen-xl mx-auto p-4">
-		<nav>
-			<ul class="flex gap-4">
-				{#each footer.menu as link}
-					<li>
-						<a href={$t_url(link.link.url)}>
-							{$t(link.label || link.link.title)}
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
+	<div class="max-w-screen-xl mx-auto px-4">
+		<div class="py-4 flex flex-wrap items-center justify-between gap-4 <md:justify-center">
+			<nav>
+				<ul class="flex gap-4">
+					{#each footer.menu as link}
+						<li>
+							<a href={$t_url(link.link.url)}>
+								{$t(link.label || link.link.title)}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</nav>
 
-		<LanguageSwitcher className="action" />
+			<LanguageSwitcher className="action" />
+		</div>
 
 		<Teams/>
 	</div>

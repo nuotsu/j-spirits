@@ -11,14 +11,14 @@ export default {
 		{ name: 'name', type: 'string', },
 		{ name: 'jersey', type: 'number', },
 		{ name: 'position', type: 'string', },
-		{ name: 'title', type: 'string', },
+		{ name: 'title', type: 'localeString', },
 		{ name: 'bt', title: 'B/T', type: 'string', },
 	],
 	preview: {
 		select: {
 			name: 'name',
 			position: 'position',
-			title: 'title',
+			title: 'title.en',
 			jersey: 'jersey',
 		},
 		prepare({ name, position, title, jersey }) {

@@ -16,6 +16,7 @@
 
 	h1 {
 		max-width: 365px;
+		text-shadow: 3px 3px theme('colors.j-green-dark');
 
 		@apply mx-auto font-bold text-4xl <md:text-2xl leading-snug;
 	}

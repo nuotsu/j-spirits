@@ -1,6 +1,9 @@
+import { IoBaseballOutline } from 'react-icons/io5'
+
 export default {
 	name: 'team',
 	title: 'Team',
+	icon: IoBaseballOutline,
 	type: 'document',
 	fields: [
 		{
