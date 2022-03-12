@@ -13,18 +13,18 @@
 		@apply bg-ground-light;
 	}
 
-	:focus-visible {
-		outline-offset: 2px;
-
-		@apply outline-1 outline-dashed outline-j-green/50;
-	}
-
 	select {
 		cursor: pointer;
 	}
 
 	svg {
 		fill: currentColor;
+	}
+
+	:focus-visible {
+		outline-offset: 2px;
+
+		@apply outline-1 outline-dashed outline-j-green/50;
 	}
 }
 
@@ -39,6 +39,10 @@
 		box-shadow: 4px 4px theme('colors.ground-dark');
 
 		@apply ground-gradient p-2;
+	}
+
+	.input {
+		@apply p-2;
 	}
 
 	.h1,.h2,.h3,.h4,.h5,.h6 {

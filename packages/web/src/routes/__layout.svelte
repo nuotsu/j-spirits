@@ -10,7 +10,7 @@
 
 <Header/>
 
-<main class="flex-grow">
+<main class="flex-grow pb-8">
 	<slot></slot>
 </main>
 

@@ -1,8 +1,18 @@
-<a class="relative inline-block pt-4 px-4 bg-white <sm:mb-8 drop-shadow-sm" {href}>
+<a href="/{ $page.params.lang || '' }">
 	<DarkLogo class="<md:h-[30px]" height={60} />
 </a>
 
 <style>
+	a {
+		position: relative;
+		display: block;
+		max-width: max-content;
+		background: #fff;
+		padding: 1rem 1rem 0;
+
+		@apply drop-shadow-sm <sm:mb-4 <md:mx-auto;
+	}
+
 	a::after {
 		content: '';
 		position: absolute;
@@ -19,6 +29,4 @@
 <script>
 	import DarkLogo from '~/lib/logo/Dark.svelte'
 	import { page } from '$app/stores'
-
-	let href = `/${ $page.params.lang || '' }`
 </script>

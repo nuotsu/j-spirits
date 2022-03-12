@@ -11,7 +11,8 @@ export const default_locale = locales.find(locale => !!locale.default)
 // translate content
 export const t = derived(page, ({ params }) => translation => !!translation
 	? (
-		translation[params.lang || default_locale.value] ||
+		translation[params.lang] ||
+		translation[default_locale.value] ||
 		'{missing translation}'
 	) : ''
 )
