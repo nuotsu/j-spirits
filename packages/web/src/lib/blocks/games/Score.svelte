@@ -20,7 +20,7 @@
 </style>
 
 <script>
-	import { total } from 'common/game'
+	import { total } from '@jspirits/common/game'
 
 	export let score, opponent, className
 </script>

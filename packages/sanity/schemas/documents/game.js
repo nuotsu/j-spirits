@@ -1,5 +1,5 @@
 import { IoBaseballOutline } from 'react-icons/io5'
-import { total } from 'common/game'
+import { total } from '@jspirits/common/game'
 
 export default {
 	name: 'game',
