@@ -1,8 +1,5 @@
 import { IoBaseballOutline } from 'react-icons/io5'
-
-function total({ cells }) {
-	return cells.reduce((acc, curr) => parseInt(Number(acc) + (Number(curr) || 0)), 0)
-}
+import { total } from 'common/game'
 
 export default {
 	name: 'game',
@@ -24,6 +21,7 @@ export default {
 				rows: Array(2).fill({ cells: Array(9).fill('0') })
 			}
 		},
+		{ name: 'link', type: 'url', },
 	],
 	preview: {
 		select: {
@@ -34,7 +32,7 @@ export default {
 		},
 		prepare({ score, opponent, ...selection }) {
 			return {
-				title: `JSP ${total(score.rows[0])} - ${total(score.rows[1])} ${opponent || 'Opponent'}`,
+				title: `JSP ${total(score)} - ${total(score, 1)} ${opponent || 'Opponent'}`,
 				...selection,
 			};
 		},

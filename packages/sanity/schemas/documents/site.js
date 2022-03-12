@@ -13,4 +13,11 @@ export default {
 			]
 		},
 	],
+	preview: {
+		prepare() {
+			return {
+				title: 'Site settings',
+			};
+		},
+	},
 }

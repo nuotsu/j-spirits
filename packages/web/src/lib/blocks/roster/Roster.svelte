@@ -1,5 +1,5 @@
 <section class="max-w-screen-xl mx-auto px-4">
-	<h2 class="h2 text-center">{$t(title)}</h2>
+	<HTag class="h2 text-center" {...heading} />
 
 	<div class="overflow-x-auto <md:full-width">
 		<table class="bg-white w-full whitespace-nowrap">
@@ -45,9 +45,10 @@
 <script>
 	import { page } from '$app/stores'
 	import { t } from '~/utils/locales'
+	import HTag from '~/lib/HTag.svelte'
 	import Sort from './Sort.svelte'
 
-	export let title
+	export let heading
 
 	function sortBy(arr, key) {
 		return arr.sort((a, b) => {

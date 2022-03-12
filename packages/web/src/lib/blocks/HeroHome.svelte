@@ -1,6 +1,6 @@
 <section class="max-w-screen-xl mx-auto p-4 text-center">
 	<div class="inner j-gradient">
-		<h1>{$t(heading)}</h1>
+		<HTag class="heading" {...heading} />
 	</div>
 </section>
 
@@ -14,7 +14,7 @@
 		@apply rounded-xl;
 	}
 
-	h1 {
+	.inner :global(.heading) {
 		max-width: 365px;
 		text-shadow: 3px 3px theme('colors.j-green-dark');
 
@@ -23,7 +23,7 @@
 </style>
 
 <script>
-	import { t } from '~/utils/locales'
+	import HTag from '~/lib/HTag.svelte'
 
 	export let heading
 </script>

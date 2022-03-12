@@ -21,8 +21,8 @@ export default () =>
 			]).icon(RiHomeGearFill),
 
 			list('Pages', 'page'),
-			list('Games', 'game'),
 			list('News', 'news'),
+			list('Games', 'game'),
 
 			S.divider(),
 

@@ -7,15 +7,15 @@ export default {
 	icon: GoJersey,
 	type: 'object',
 	fields: [
-		{ name: 'title', type: 'localeString' },
+		{ name: 'heading', type: 'localeHeading' },
 	],
 	preview: {
 		select: {
-			title: 'title',
+			heading: 'heading.text',
 		},
-		prepare({ title }) {
+		prepare({ heading }) {
 			return {
-				title: t(title),
+				title: t(heading),
 				subtitle: 'Roster',
 			}
 		},

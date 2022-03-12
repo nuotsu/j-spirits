@@ -61,12 +61,20 @@
 			}
 		`)
 
+		const games = await client.fetch(`
+			*[_type == 'game']{
+				...,
+				opponent->{name}
+			}
+		`)
+
 		return {
 			stuff: {
 				site: await client.fetch(`*[_type == 'site'][0]`),
 				header,
 				footer,
 				news: await client.fetch(`*[_type == 'news'] | order(date desc)`),
+				games,
 				roster: await client.fetch(`*[_type == 'player'] | order(jersey asc)`),
 				teams: await client.fetch(`*[_type == 'team'] | order(name.full asc)`),
 			}

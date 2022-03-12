@@ -1,5 +1,5 @@
 <section class="max-w-screen-md mx-auto px-4">
-	<h2 class="h2 text-center">{$t(title)}</h2>
+	<HTag class="h2 text-center" {...heading} />
 
 	<Form name="contact" class="grid gap-2">
 		<label>
@@ -31,7 +31,8 @@
 
 <script>
 	import { t } from '~/utils/locales'
+	import HTag from '../HTag.svelte'
 	import Form from './NetlifyForm.svelte'
 
-	export let title
+	export let heading
 </script>

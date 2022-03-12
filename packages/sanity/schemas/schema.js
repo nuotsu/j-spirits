@@ -6,13 +6,13 @@ import site from './documents/site'
 import header from './documents/header'
 import footer from './documents/footer'
 import page from './documents/page'
-import game from './documents/game'
 import news from './documents/news'
+import game from './documents/game'
 import player from './documents/player'
 import team from './documents/team'
 
 // objects
-import { localeString } from './objects/locales'
+import { localeHeading, localeString } from './objects/locales'
 import { internalLink, externalLink } from './objects/link'
 
 // blocks
@@ -20,6 +20,7 @@ import heroHome from './blocks/heroHome'
 import newsList from './blocks/newsList'
 import roster from './blocks/roster'
 import contactForm from './blocks/contactForm'
+import gameList from './blocks/gameList'
 
 export default createSchema({
   name: 'default',
@@ -29,18 +30,19 @@ export default createSchema({
     header,
     footer,
     page,
-    game,
     news,
+    game,
     player,
     team,
 
     // objects
-    localeString,
+    localeString, localeHeading,
     internalLink, externalLink,
 
     // blocks
     heroHome,
     newsList,
+    gameList,
     roster,
     contactForm,
   ]),

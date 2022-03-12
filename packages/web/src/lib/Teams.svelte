@@ -9,7 +9,11 @@
 	<ul class="grid grid-cols-5 max-w-[450px]">
 		{#each teams as team}
 			<li>
-				<a href={team.link} target="_blank" rel="noopener noreferrer">
+				<a
+					href={team.link}
+					target="_blank" rel="noopener noreferrer"
+					title="{team.name.full} ({team.name.short})"
+				>
 					<Img
 						image={team.image}
 						builder={b => b.width(150).height(75)}

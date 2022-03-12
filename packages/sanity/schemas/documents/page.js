@@ -23,6 +23,7 @@ export default {
 			of: [
 				{ type: 'heroHome' },
 				{ type: 'newsList' },
+				{ type: 'gameList' },
 				{ type: 'roster' },
 				{ type: 'contactForm' },
 			],

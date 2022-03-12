@@ -1,13 +1,14 @@
-import { MdArtTrack } from 'react-icons/md'
 import { t } from '../objects/locales'
+import { IoBaseballOutline } from 'react-icons/io5'
 
 export default {
-	name: 'heroHome',
-	title: 'Hero (Homepage)',
-	icon: MdArtTrack,
+	name: 'gameList',
+	title: 'Game list',
+	icon: IoBaseballOutline,
 	type: 'object',
 	fields: [
 		{ name: 'heading', type: 'localeHeading', },
+		{ name: 'compact', type: 'boolean', },
 	],
 	preview: {
 		select: {
@@ -16,7 +17,8 @@ export default {
 		prepare({ heading }) {
 			return {
 				title: t(heading),
-			};
+				subtitle: 'Game list',
+			}
 		},
 	},
 }
