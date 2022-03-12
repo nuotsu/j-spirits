@@ -1,12 +1,12 @@
 import S from '@sanity/desk-tool/structure-builder'
 import { singleton, list, group } from './helpers'
 import { RiHomeGearFill, RiLayoutTop2Line, RiLayoutBottom2Line } from 'react-icons/ri'
-import { AiFillNotification } from 'react-icons/ai'
 
 const AllDocuments = S.documentTypeListItems()
 	.filter(item => ![
 		'site', 'header', 'footer',
 		'page', 'news',
+		'game',
 		'player', 'team',
 	].includes(item.getId()))
 
@@ -21,7 +21,8 @@ export default () =>
 			]).icon(RiHomeGearFill),
 
 			list('Pages', 'page'),
-			list('News', 'news').icon(AiFillNotification),
+			list('Games', 'game'),
+			list('News', 'news'),
 
 			S.divider(),
 

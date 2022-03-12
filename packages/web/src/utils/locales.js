@@ -2,8 +2,8 @@ import { derived } from 'svelte/store'
 import { page } from '$app/stores'
 
 export const locales = [
-	{ value: 'en', title: 'English', default: true },
-	{ value: 'ja', title: 'Japanese' },
+	{ value: 'en', title: '🇺🇸 English', default: true },
+	{ value: 'ja', title: '🇯🇵 Japanese' },
 ]
 
 export const default_locale = locales.find(locale => !!locale.default)

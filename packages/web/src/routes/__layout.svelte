@@ -36,7 +36,7 @@
 	import client from '~/utils/sanity'
 	import { default_locale } from '~/utils/locales'
 
-	export async function load({ params }) {
+	export async function load() {
 		const header = await client.fetch(`
 			*[_type == 'header'][0]{
 				menu[]{
@@ -61,16 +61,14 @@
 			}
 		`)
 
-		const roster = await client.fetch(`*[_type == 'player'] | order(jersey asc)`)
-
-		const teams = await client.fetch(`*[_type == 'team'] | order(name.full asc)`)
-
 		return {
 			stuff: {
+				site: await client.fetch(`*[_type == 'site'][0]`),
 				header,
 				footer,
-				roster,
-				teams,
+				news: await client.fetch(`*[_type == 'news'] | order(date desc)`),
+				roster: await client.fetch(`*[_type == 'player'] | order(jersey asc)`),
+				teams: await client.fetch(`*[_type == 'team'] | order(name.full asc)`),
 			}
 		}
 	}

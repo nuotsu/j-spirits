@@ -20,6 +20,7 @@ export default {
 		prepare({ title, ...selection }) {
 			return {
 				title: t(title),
+				media: false,
 				...selection,
 			};
 		},

@@ -6,6 +6,7 @@ import site from './documents/site'
 import header from './documents/header'
 import footer from './documents/footer'
 import page from './documents/page'
+import game from './documents/game'
 import news from './documents/news'
 import player from './documents/player'
 import team from './documents/team'
@@ -28,9 +29,10 @@ export default createSchema({
     header,
     footer,
     page,
+    game,
+    news,
     player,
     team,
-    news,
 
     // objects
     localeString,

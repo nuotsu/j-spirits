@@ -19,7 +19,9 @@
 		<Teams/>
 	</div>
 
-	<p class="bg-j-green-dark p-4 text-center text-xs">© {new Date().getFullYear()} J-Spirits. All Rights Reserved.</p>
+	<p class="bg-j-green-dark p-4 text-center text-xs">
+		© {new Date().getFullYear()} {$t(site.title.short)}. All Rights Reserved.
+	</p>
 </footer>
 
 <script>
@@ -28,5 +30,5 @@
 	import LanguageSwitcher from '~/lib/LanguageSwitcher.svelte'
 	import Teams from '~/lib/Teams.svelte'
 
-	let { footer } = $page.stuff
+	let { site, footer } = $page.stuff
 </script>

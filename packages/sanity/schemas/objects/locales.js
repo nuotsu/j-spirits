@@ -1,6 +1,6 @@
 const languages = [
-	{ name: 'en', title: 'English', default: true },
-	{ name: 'ja', title: 'Japanese' },
+	{ name: 'en', title: '🇺🇸 English', default: true },
+	{ name: 'ja', title: '🇯🇵 Japanese' },
 ]
 
 export const localeString = {

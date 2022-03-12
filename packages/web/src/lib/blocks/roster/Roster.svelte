@@ -13,7 +13,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each sortBy(roster, $sort) as player (player.name)}
+				{#each sortBy($page.stuff.roster, $sort) as player (player.name)}
 					<tr class="text-center">
 						<td class="font-bold text-j-green-light">{player.jersey}</td>
 						<td>{player.name}</td>
@@ -48,8 +48,6 @@
 	import Sort from './Sort.svelte'
 
 	export let title
-
-	let { roster } = $page.stuff
 
 	function sortBy(arr, key) {
 		return arr.sort((a, b) => {

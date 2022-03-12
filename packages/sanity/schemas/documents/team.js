@@ -1,9 +1,9 @@
-import { IoBaseballOutline } from 'react-icons/io5'
+import { GiBilledCap } from 'react-icons/gi'
 
 export default {
 	name: 'team',
 	title: 'Team',
-	icon: IoBaseballOutline,
+	icon: GiBilledCap,
 	type: 'document',
 	fields: [
 		{
