@@ -20,6 +20,8 @@
 	export async function load() {
 		const page = await client.fetch(`*[_type == 'page' && slug.current == '/'][0]`)
 
+		console.debug({ lang: default_locale.value })
+
 		if (!!page) {
 			return {
 				props: {
