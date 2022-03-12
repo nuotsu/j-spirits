@@ -12,7 +12,7 @@
 				<a href={team.link} target="_blank" rel="noopener noreferrer">
 					<Img
 						image={team.image}
-						builder={b => b.width(300).height(150)}
+						builder={b => b.width(150).height(75)}
 						alt={team.name.full}
 					/>
 				</a>

@@ -22,6 +22,7 @@ export default {
 			group: 'content',
 			of: [
 				{ type: 'heroHome' },
+				{ type: 'newsList' },
 				{ type: 'roster' },
 				{ type: 'contactForm' },
 			],
