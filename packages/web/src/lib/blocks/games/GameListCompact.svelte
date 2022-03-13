@@ -53,7 +53,5 @@
 
 	export let heading, link
 
-	console.debug(link)
-
 	let { games, upcomingGames } = $page.stuff
 </script>
