@@ -13,9 +13,8 @@
 
 <script context="module">
 	import client from '~/utils/sanity'
+	import groq from '~/utils/groq'
 	import { default_locale } from '~/utils/locales'
-
-	export const prerender = true
 
 	export async function load() {
 		const page = await client.fetch(`
@@ -23,11 +22,7 @@
 				...,
 				blocks[]{
 					...,
-					link{
-						label,
-						'internalUrl': '/' + link->slug.current,
-						'page': link->{title}
-					}
+					link{ ${groq.internalLink} }
 				}
 			}
 		`)

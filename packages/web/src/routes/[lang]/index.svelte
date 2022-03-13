@@ -13,22 +13,20 @@
 
 <script context="module">
 	import client from '~/utils/sanity'
+	import groq from '~/utils/groq'
 	import { locales } from '~/utils/locales'
 
 	export const prerender = true
 
 	export async function load({ params }) {
 		const { lang } = params
+
 		const page = await client.fetch(`
 			*[_type == 'page' && slug.current == '/'][0]{
 				...,
 				blocks[]{
 					...,
-					link{
-						label,
-						'internalUrl': '/' + link->slug.current,
-						'page': link->{title}
-					}
+					link{ ${groq.internalLink} }
 				}
 			}
 		`)
