@@ -6,9 +6,16 @@
 		})}
 	</time>
 
-	<Score className="text-xl" {score} {opponent} />
+	<Score
+		className="{status === 'completed' ? 'text-xl' : 'text-2xl'} text-j-green"
+		{opponent} {status} {score}
+	/>
 
-	<Scoreboard {score} {opponent} />
+	{#if status === 'completed'}
+		<Scoreboard {score} {opponent} />
+	{:else if !!status}
+		<p class="text-center"><small class="chip text-j-green-light">{status}</small></p>
+	{/if}
 
 	{#if link}
 		<p class="text-right">
@@ -28,5 +35,5 @@
 	import Score from './Score.svelte'
 	import Scoreboard from './Scoreboard.svelte'
 
-	export let date, opponent, score, link
+	export let date, opponent, status, score, link
 </script>

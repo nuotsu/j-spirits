@@ -19,7 +19,19 @@
 
 	export async function load({ params }) {
 		const { lang } = params
-		const page = await client.fetch(`*[_type == 'page' && slug.current == '/'][0]`)
+		const page = await client.fetch(`
+			*[_type == 'page' && slug.current == '/'][0]{
+				...,
+				blocks[]{
+					...,
+					link{
+						label,
+						'internalUrl': '/' + link->slug.current,
+						'page': link->{title}
+					}
+				}
+			}
+		`)
 
 		const accepted_lang = locales.map(l => l.value).includes(lang)
 

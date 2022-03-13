@@ -2,14 +2,20 @@
 	<HTag class="h2" {...heading} />
 
 	<ul class="list <md:full-width">
-		{#each $page.stuff.games as game}
-			<li>
-				<GameCompact {...game} />
-			</li>
+		{#if !!upcomingGames[0]}
+			<GameCompact {...upcomingGames[0]} />
+		{/if}
+
+		{#each games as game}
+			<GameCompact {...game} />
 		{/each}
 
 		<li class="self-center">
-			<a class="ground-gradient flex-shrink-0" href={$t_url`/games`} title={$t({ en: 'View more games', ja: '試合結果一覧へ'})}>
+			<a
+				class="ground-gradient flex-shrink-0"
+				href={$t_url(link.internalUrl)}
+				title={$t(link.label || link.page.title)}
+			>
 				<ArrowRight height="2em" />
 			</a>
 		</li>
@@ -45,5 +51,9 @@
 	import ArrowRight from '~/lib/icons/ArrowRight.svelte'
 	import { t, t_url } from '~/utils/locales'
 
-	export let heading
+	export let heading, link
+
+	console.debug(link)
+
+	let { games, upcomingGames } = $page.stuff
 </script>

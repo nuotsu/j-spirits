@@ -52,7 +52,7 @@
 	import { total } from '~/utils/game'
 	import Img from '~/lib/Img.svelte'
 
-	export let score, opponent
+	export let opponent, score
 
 	let { site, teams } = $page.stuff
 

@@ -17,7 +17,29 @@
 
 	export async function load({ params }) {
 		const { lang, slug } = params
-		const page = await client.fetch(`*[_type == 'page' && slug.current == '${ slug }'][0]`)
+		const page = await client.fetch(`
+			*[_type == 'page' && slug.current == '${ slug }'][0]{
+				...,
+				blocks[]{
+					...,
+					link{
+						label,
+						'internalUrl': '/' + link->slug.current,
+						'page': link->{title}
+					},
+					cta{
+						link[0]{
+							_type,
+							url,
+							'internalUrl': '/' + link->slug.current,
+							label,
+							'page': link->{title}
+						},
+						style
+					}
+				}
+			}
+		`)
 
 		const accepted_lang = locales.map(l => l.value).includes(lang)
 

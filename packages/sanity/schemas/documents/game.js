@@ -18,6 +18,13 @@ export default {
 			to: [{ type: 'team' }],
 		},
 		{
+			name: 'status',
+			type: 'string',
+			options: {
+				list: ['upcoming', 'completed', 'canceled'],
+			},
+		},
+		{
 			name: 'score',
 			type: 'table',
 			description: 'JSP (top) vs Opponent (bottom)',
@@ -29,14 +36,17 @@ export default {
 	],
 	preview: {
 		select: {
-			subtitle: 'date',
-			media: 'opponent.image',
 			score: 'score',
 			opponent: 'opponent.name.short',
+			status: 'status',
+			subtitle: 'date',
+			media: 'opponent.image',
 		},
-		prepare({ score, opponent, ...selection }) {
+		prepare({ score, opponent, status, ...selection }) {
 			return {
-				title: `JSP ${total(score)} - ${total(score, 1)} ${opponent || 'Opponent'}`,
+				title: status === 'completed'
+					? `JSP ${total(score)} - ${total(score, 1)} ${opponent || 'Opponent'}`
+					: `JSP vs ${opponent || 'Opponent'}`,
 				...selection,
 			};
 		},

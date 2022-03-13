@@ -20,7 +20,7 @@
 	</div>
 
 	<p class="bg-j-green-dark p-4 text-center text-xs">
-		© {new Date().getFullYear()} {$t(site.title.short)}. All Rights Reserved.
+		© {new Date().getFullYear()} {$t(site.title.full)}. All Rights Reserved.
 	</p>
 </footer>
 

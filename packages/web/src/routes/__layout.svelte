@@ -62,7 +62,14 @@
 		`)
 
 		const games = await client.fetch(`
-			*[_type == 'game']{
+			*[_type == 'game' && status == 'completed']|order(date desc){
+				...,
+				opponent->{name}
+			}
+		`)
+
+		const upcomingGames = await client.fetch(`
+			*[_type == 'game' && status == 'upcoming']|order(date asc){
 				...,
 				opponent->{name}
 			}
@@ -75,6 +82,7 @@
 				footer,
 				news: await client.fetch(`*[_type == 'news'] | order(date desc)`),
 				games,
+				upcomingGames,
 				roster: await client.fetch(`*[_type == 'player'] | order(jersey asc)`),
 				teams: await client.fetch(`*[_type == 'team'] | order(name.full asc)`),
 			}

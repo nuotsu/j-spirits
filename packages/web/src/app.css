@@ -60,6 +60,19 @@
 	.h1,.h2,.h3,.h4,.h5,.h6 {
 		@apply first-letter:text-j-green-light font-bold mb-2;
 	}
+
+	.technical {
+		letter-spacing: 1px;
+		@apply uppercase;
+	}
+
+	.chip {
+		padding: 0 1em;
+		border: 1px solid currentColor;
+		border-radius: 2em;
+
+		@apply technical;
+	}
 }
 
 @layer utilities {

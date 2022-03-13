@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>{$t(title)} | {$t(site.title.short)}</title>
+	<title>{$t(title)} | {$t(site.title.full)}</title>
 	<meta name="description" content={description}>
 </svelte:head>
 

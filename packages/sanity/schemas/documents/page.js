@@ -23,7 +23,9 @@ export default {
 			of: [
 				{ type: 'heroHome' },
 				{ type: 'newsList' },
+				{ type: 'gameListCompact' },
 				{ type: 'gameList' },
+				{ type: 'upcomingGameList' },
 				{ type: 'roster' },
 				{ type: 'contactForm' },
 			],

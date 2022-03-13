@@ -2,12 +2,13 @@ import { t } from '../objects/locales'
 import { IoBaseballOutline } from 'react-icons/io5'
 
 export default {
-	name: 'gameList',
-	title: 'Game list',
+	name: 'gameListCompact',
+	title: 'Game list (compact)',
 	icon: IoBaseballOutline,
 	type: 'object',
 	fields: [
 		{ name: 'heading', type: 'localeHeading', },
+		{ name: 'link', type: 'internalLink', },
 	],
 	preview: {
 		select: {
@@ -16,7 +17,7 @@ export default {
 		prepare({ heading }) {
 			return {
 				title: t(heading),
-				subtitle: 'Game list',
+				subtitle: 'Game list (compact)',
 			}
 		},
 	},

@@ -30,7 +30,7 @@ export const externalLink = {
 	title: 'External link',
 	type: 'object',
 	fields: [
-		{ name: 'url', type: 'url', },
+		{ name: 'url', title: 'Link', type: 'url', },
 		{ name: 'label', type: 'localeString', },
 	],
 	preview: {

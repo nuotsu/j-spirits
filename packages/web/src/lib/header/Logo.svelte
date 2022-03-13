@@ -1,4 +1,4 @@
-<a href="/{ $page.params.lang || '' }">
+<a href="/{ $page.params.lang || '' }" rel="external">
 	<DarkLogo class="<md:h-[30px]" height={60} />
 </a>
 
