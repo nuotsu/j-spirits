@@ -10,6 +10,7 @@
 	div {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 0.5em;
 		margin-inline: auto;
 	}
@@ -20,10 +21,7 @@
 </style>
 
 <script>
-	export let score, opponent, className
+	import { total } from '~/utils/game'
 
-	const total = ({ rows }, index = 0) => rows[index]?.cells?.reduce(
-		(acc, curr) => parseInt(Number(acc) + (Number(curr) || 0)),
-		0
-	)
+	export let score, opponent, className
 </script>

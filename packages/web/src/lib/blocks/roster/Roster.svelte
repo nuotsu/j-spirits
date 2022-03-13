@@ -2,7 +2,7 @@
 	<HTag class="h2 text-center" {...heading} />
 
 	<div class="overflow-x-auto <md:full-width">
-		<table class="bg-white w-full whitespace-nowrap">
+		<table class="bg-white w-full whitespace-nowrap text-center">
 			<thead>
 				<tr>
 					<th><Sort by="jersey">{$t({ en: 'Jersey', ja: '背番号' })}</Sort></th>
@@ -14,7 +14,7 @@
 			</thead>
 			<tbody>
 				{#each sortBy($page.stuff.roster, $sort) as player (player.name)}
-					<tr class="text-center">
+					<tr>
 						<td class="font-bold text-j-green-light">{player.jersey}</td>
 						<td>{player.name}</td>
 						<td>{player.position || ''}</td>

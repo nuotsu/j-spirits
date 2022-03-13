@@ -1,15 +1,19 @@
 <section class="max-w-screen-xl mx-auto p-4">
 	<HTag class="h2" {...heading} />
 
-	<div class="list <md:full-width">
+	<ul class="list <md:full-width">
 		{#each $page.stuff.games as game}
-			<Game {...game} />
+			<li>
+				<GameCompact {...game} />
+			</li>
 		{/each}
 
-		<a class="j-gradient flex-shrink-0" href={$t_url`/games`} title={$t({ en: 'View more games', ja: '試合結果一覧へ'})}>
-			<ArrowRight height="2em" />
-		</a>
-	</div>
+		<li class="self-center">
+			<a class="ground-gradient flex-shrink-0" href={$t_url`/games`} title={$t({ en: 'View more games', ja: '試合結果一覧へ'})}>
+				<ArrowRight height="2em" />
+			</a>
+		</li>
+	</ul>
 </section>
 
 <style>
@@ -23,7 +27,6 @@
 	}
 
 	a {
-		align-self: center;
 		display: grid;
 		place-content: center;
 		width: 3em;
@@ -31,14 +34,14 @@
 		border-radius: 100%;
 		scroll-snap-align: start;
 
-		@apply text-white;
+		@apply text-ground-dark;
 	}
 </style>
 
 <script>
 	import { page } from '$app/stores'
 	import HTag from '~/lib/HTag.svelte'
-	import Game from './Game.svelte'
+	import GameCompact from './GameCompact.svelte'
 	import ArrowRight from '~/lib/icons/ArrowRight.svelte'
 	import { t, t_url } from '~/utils/locales'
 

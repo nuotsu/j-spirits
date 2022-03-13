@@ -2,13 +2,14 @@
 	<HTag class="h2" {...heading} />
 
 	{#each $page.stuff.games as game}
-		<article>{game.date}</article>
+		<Game {...game} />
 	{/each}
 </section>
 
 <script>
 	import { page } from '$app/stores'
 	import HTag from '~/lib/HTag.svelte'
+	import Game from './Game.svelte'
 
 	export let heading
 </script>

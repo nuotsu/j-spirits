@@ -9,7 +9,7 @@ export default {
 			type: 'object',
 			fields: [
 				{ name: 'short', type: 'localeString', },
-				{ name: 'long', type: 'localeString', },
+				{ name: 'full', type: 'localeString', },
 			]
 		},
 	],

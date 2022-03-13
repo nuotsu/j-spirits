@@ -1,5 +1,5 @@
 <section class="max-w-screen-md mx-auto p-4">
-	<HTag class="h2 px-4" {...heading} />
+	<HTag class="h2" {...heading} />
 
 	<ul class="bg-white px-4">
 		{#each $page.stuff.news as news}

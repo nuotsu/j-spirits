@@ -40,6 +40,10 @@
 	}
 
 	@screen <md {
+		header.open {
+			@apply bg-ground/90;
+		}
+
 		header:not(.open) {
 			@apply bg-transparent backdrop-blur-none;
 		}

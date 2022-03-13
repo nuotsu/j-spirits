@@ -29,6 +29,10 @@
 }
 
 @layer components {
+	.link {
+		@apply text-j-green underline hover:decoration-2;
+	}
+
 	.action {
 		box-shadow: 4px 4px theme('colors.j-green-dark');
 
