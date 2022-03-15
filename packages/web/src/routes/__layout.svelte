@@ -37,55 +37,43 @@
 	import { default_locale } from '~/utils/locales'
 
 	export async function load() {
-		const header = await client.fetch(`
-			*[_type == 'header'][0]{
-				menu[]{
-					...,
-					link->{
+		const result = await client.fetch(`
+			{
+				'site': *[_type == 'site'][0],
+				'header': *[_type == 'header'][0]{
+					menu[]{
 						...,
-						'url': '/' + slug.current
+						link->{
+							...,
+							'url': '/' + slug.current
+						}
 					}
-				}
-			}
-		`)
-
-		const footer = await client.fetch(`
-			*[_type == 'footer'][0]{
-				menu[]{
-					...,
-					link->{
+				},
+				'footer': *[_type == 'footer'][0]{
+					menu[]{
 						...,
-						'url': '/' + slug.current
+						link->{
+							...,
+							'url': '/' + slug.current
+						}
 					}
-				}
-			}
-		`)
-
-		const games = await client.fetch(`
-			*[_type == 'game' && status == 'completed']|order(date desc){
-				...,
-				opponent->{name}
-			}
-		`)
-
-		const upcomingGames = await client.fetch(`
-			*[_type == 'game' && status == 'upcoming']|order(date asc){
-				...,
-				opponent->{name}
+				},
+				'news': *[_type == 'news']|order(date desc),
+				'games': *[_type == 'game' && status == 'completed']|order(date desc){
+					...,
+					opponent->{name}
+				},
+				'upcomingGames': *[_type == 'game' && status == 'upcoming']|order(date asc){
+					...,
+					opponent->{name}
+				},
+				'roster': *[_type == 'player']|order(jersey asc),
+				'teams': *[_type == 'team']|order(name.full asc),
 			}
 		`)
 
 		return {
-			stuff: {
-				site: await client.fetch(`*[_type == 'site'][0]`),
-				header,
-				footer,
-				news: await client.fetch(`*[_type == 'news'] | order(date desc)`),
-				games,
-				upcomingGames,
-				roster: await client.fetch(`*[_type == 'player'] | order(jersey asc)`),
-				teams: await client.fetch(`*[_type == 'team'] | order(name.full asc)`),
-			}
+			stuff: result,
 		}
 	}
 </script>
