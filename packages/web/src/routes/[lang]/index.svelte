@@ -31,8 +31,6 @@
 			}
 		`)
 
-		console.log({lang, page})
-
 		const accepted_lang = locales.map(l => l.value).includes(lang)
 
 		if (!!accepted_lang && !!page) {

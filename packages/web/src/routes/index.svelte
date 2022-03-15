@@ -29,8 +29,6 @@
 			}
 		`)
 
-		console.log({lang, page})
-
 		if (!!page) {
 			return {
 				props: {
