@@ -1,20 +1,28 @@
-{#if _type === 'heroHome'} <HeroHome {...props} />
-<!-- {:else if _type === 'newsList'} <NewsList {...props} />
-{:else if _type === 'gameListCompact'} <GameListCompact {...props} />
-{:else if _type === 'gameList'} <GameList {...props} />
-{:else if _type === 'upcomingGameList'} <UpcomingGameList {...props} />
-{:else if _type === 'roster'} <Roster {...props} />
-{:else if _type === 'contactForm'} <ContactForm {...props} /> -->
-{/if}
+<svelte:component this={Component} {...props} />
 
 <script>
-	import HeroHome from '~/lib/blocks/HeroHome.svelte'
-	// import GameList from '~/lib/blocks/games/GameList.svelte'
-	// import GameListCompact from '~/lib/blocks/games/GameListCompact.svelte'
-	// import UpcomingGameList from '~/lib/blocks/games/UpcomingGameList.svelte'
-	// import NewsList from '~/lib/blocks/NewsList.svelte'
-	// import Roster from '~/lib/blocks/roster/Roster.svelte'
-	// import ContactForm from '~/lib/forms/ContactForm.svelte'
+	import { onMount } from 'svelte'
 
 	let { _type, ...props } = $$props
+
+	let Component = null
+
+	onMount(async () => {
+		Component =
+			_type === 'heroHome'
+				? (await import('~/lib/blocks/HeroHome.svelte')).default :
+			_type === 'gameList'
+				? (await import('~/lib/blocks/games/GameList.svelte')).default :
+			_type === 'gameListCompact'
+				? (await import('~/lib/blocks/games/GameListCompact.svelte')).default :
+			_type === 'upcomingGameList'
+				? (await import('~/lib/blocks/games/UpcomingGameList.svelte')).default :
+			_type === 'newsList'
+				? (await import('~/lib/blocks/NewsList.svelte')).default :
+			_type === 'roster'
+				? (await import('~/lib/blocks/roster/Roster.svelte')).default :
+			_type === 'contactForm'
+				? (await import('~/lib/forms/ContactForm.svelte')).default :
+			null
+	})
 </script>
