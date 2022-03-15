@@ -16,7 +16,9 @@
 	import groq from '~/utils/groq'
 	import { default_locale } from '~/utils/locales'
 
-	export async function load() {
+	export async function load({ params }) {
+		let { lang } = params
+
 		const page = await client.fetch(`
 			*[_type == 'page' && slug.current == '/'][0]{
 				...,
@@ -26,6 +28,8 @@
 				}
 			}
 		`)
+
+		console.log({lang, page})
 
 		if (!!page) {
 			return {
