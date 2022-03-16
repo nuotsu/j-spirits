@@ -1,5 +1,6 @@
-import Header from 'lib/header/Header'
 import { GlobalProvider } from 'lib/store/Global'
+import Header from 'lib/header/Header'
+import Footer from 'lib/footer/Footer'
 import 'styles/app.css'
 
 export default ({ Component, pageProps }) => {
@@ -8,10 +9,6 @@ export default ({ Component, pageProps }) => {
 	const value = {
 		...global,
 		locale,
-		locales: [
-			{ value: 'en', label: '🇺🇸 English' },
-			{ value: 'ja', label: '🇯🇵 日本語' },
-		],
 	}
 
 	return (
@@ -21,6 +18,8 @@ export default ({ Component, pageProps }) => {
 			<main>
 				<Component {...componentProps} />
 			</main>
+
+			<Footer />
 		</GlobalProvider>
 	)
 }

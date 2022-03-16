@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import { useRouter } from 'next/router'
 
@@ -10,6 +10,7 @@ export default ({ className }) => {
 
 	function onChange({ target }) {
 		router.push({ pathname, query }, asPath, { locale: target.value })
+		console.log(locale)
 	}
 
 	return (

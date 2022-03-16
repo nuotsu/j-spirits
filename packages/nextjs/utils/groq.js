@@ -1,3 +1,11 @@
+const menu = `
+	...,
+	link->{
+		title,
+		'url': select(slug.current == '/' => '/', '/' + slug.current),
+	}
+`
+
 const internalLink = `
 	'internalUrl': '/' + link->slug.current,
 	'page': link->{title},
@@ -16,22 +24,10 @@ const cta = `
 const global = `
 	'site': *[_type == 'site'][0],
 	'header': *[_type == 'header'][0]{
-		menu[]{
-			...,
-			link->{
-				title,
-				'url': '/' + slug.current
-			}
-		}
+		menu[]{ ${menu} }
 	},
 	'footer': *[_type == 'footer'][0]{
-		menu[]{
-			...,
-			link->{
-				title,
-				'url': '/' + slug.current
-			}
-		}
+		menu[]{ ${menu} }
 	},
 	'news': *[_type == 'news']|order(date desc),
 	'games': *[_type == 'game' && status == 'completed']|order(date desc){
