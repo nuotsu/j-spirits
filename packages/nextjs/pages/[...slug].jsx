@@ -1,13 +1,11 @@
 import client from '../utils/sanity'
 import groq from '../utils/groq'
 
-const Page = ({ page, locale }) => <>
+export default ({ page, locale }) => <>
 	<mark>{locale}</mark>
 
 	<pre>{JSON.stringify(page, null, 2)}</pre>
 </>
-
-export default Page
 
 export async function getStaticPaths({ locales }) {
 	const paths = await client.fetch(`
