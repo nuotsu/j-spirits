@@ -1,11 +1,9 @@
-import client from '../utils/sanity'
-import groq from '../utils/groq'
+import client from 'utils/sanity'
+import groq from 'utils/groq'
 
-export default ({ page, locale }) => <>
-	<mark>{locale}</mark>
-
+export default ({ page }) => (
 	<pre>{JSON.stringify(page, null, 2)}</pre>
-</>
+)
 
 export async function getStaticPaths({ locales }) {
 	const paths = await client.fetch(`
@@ -23,21 +21,25 @@ export async function getStaticPaths({ locales }) {
 export async function getStaticProps({ params, locale }) {
 	const { slug } = params
 
-	const page = await client.fetch(`
-		*[_type == 'page' && slug.current == '${ slug }'][0]{
-			...,
-			blocks[]{
+	const { page, ...global } = await client.fetch(`
+		{
+			'page': *[_type == 'page' && slug.current == '${ slug }'][0]{
 				...,
-				link{ ${groq.internalUrl} },
-				cta{ ${groq.cta} }
-			}
+				blocks[]{
+					...,
+					link{ ${groq.internalUrl} },
+					cta{ ${groq.cta} }
+				}
+			},
+			${groq.global}
 		}
 	`)
 
 	return {
 		props: {
-			page,
 			locale,
+			page,
+			global
 		}
 	}
 }

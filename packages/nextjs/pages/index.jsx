@@ -1,27 +1,29 @@
-import client from '../utils/sanity'
-import groq from '../utils/groq'
+import client from 'utils/sanity'
+import groq from 'utils/groq'
 
-export default ({ page, locale }) => <>
-	<mark>{locale}</mark>
-
+export default ({ page }) => (
 	<pre>{JSON.stringify(page, null, 2)}</pre>
-</>
+)
 
 export async function getStaticProps({ locale }) {
-	const page = await client.fetch(`
-		*[_type == 'page' && slug.current == '/'][0]{
-			...,
-			blocks[]{
+	const { page, ...global } = await client.fetch(`
+		{
+			'page': *[_type == 'page' && slug.current == '/'][0]{
 				...,
-				link{ ${groq.internalUrl} }
-			}
+				blocks[]{
+					...,
+					link{ ${groq.internalUrl} }
+				}
+			},
+			${groq.global}
 		}
 	`)
 
 	return {
 		props: {
-			page,
 			locale,
+			page,
+			global
 		}
 	}
 }
