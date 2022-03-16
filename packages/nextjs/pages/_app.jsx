@@ -3,17 +3,20 @@ import { GlobalProvider } from 'lib/store/Global'
 import 'styles/app.css'
 
 export default ({ Component, pageProps }) => {
-	const { global, ...componentProps } = pageProps
-	const { header, ...globalProps } = global
+	const { global, locale, ...componentProps } = pageProps
 
 	const value = {
-		...globalProps,
-		locale: pageProps.locale,
+		...global,
+		locale,
+		locales: [
+			{ value: 'en', label: '🇺🇸 English' },
+			{ value: 'ja', label: '🇯🇵 日本語' },
+		],
 	}
 
 	return (
 		<GlobalProvider value={value}>
-			<Header {...header} />
+			<Header />
 
 			<main>
 				<Component {...componentProps} />

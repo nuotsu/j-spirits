@@ -1,3 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	:root {
+		accent-color: theme('colors.j-green-light');
+	}
+
+	body {
+		@apply bg-ground-light;
+	}
+
+	select {
+		cursor: pointer;
+	}
+
+	svg {
+		fill: currentColor;
+	}
+
+	:focus-visible {
+		outline-offset: 2px;
+
+		@apply outline-1 outline-dashed outline-j-green/50;
+	}
+}
+
+@layer components {
+	.link {
+		@apply text-j-green underline hover:decoration-2;
+	}
+
+	.action {
+		box-shadow: 4px 4px theme('colors.j-green-dark');
+
+		@apply j-gradient p-2;
+	}
+
+	.action-2 {
+		box-shadow: 4px 4px theme('colors.ground-dark');
+
+		@apply ground-gradient p-2;
+	}
+
+	.input {
+		@apply p-2;
+	}
+
+	.h1,.h2 {
+		@apply text-2xl;
+	}
+
+	.h3 {
+		@apply text-xl;
+	}
+
+	.h1,.h2,.h3,.h4,.h5,.h6 {
+		@apply first-letter:text-j-green-light font-bold mb-2;
+	}
+
+	.technical {
+		letter-spacing: 1px;
+		@apply uppercase;
+	}
+
+	.chip {
+		padding: 0 1em;
+		border: 1px solid currentColor;
+		border-radius: 2em;
+
+		@apply technical;
+	}
+}
+
+@layer utilities {
+	.full-width {
+		width: 100vw;
+		margin-inline: calc(50% - 50vw);
+	}
+
+	.j-gradient {
+		@apply bg-gradient-to-tr from-j-green to-j-green-light text-white;
+	}
+	.ground-gradient {
+		@apply bg-gradient-to-tr from-ground to-ground-light;
+	}
+}
