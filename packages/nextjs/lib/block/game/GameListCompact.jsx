@@ -13,7 +13,7 @@ const GameListCompact = ({ heading, link }) => {
 	const nextGame = upcomingGames[0]
 
 	return (
-		<section class="max-w-screen-xl mx-auto p-4">
+		<section className="max-w-screen-xl mx-auto p-4">
 			<HTag className="h2" {...heading} />
 
 			<ul className={`${css.list} <md:full-width`}>
