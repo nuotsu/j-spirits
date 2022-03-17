@@ -6,7 +6,7 @@ import LocaleSwitcher from 'lib/LocaleSwitcher'
 import Toggle from './Toggle'
 import clsx from 'clsx'
 
-export default () => {
+const Header = () => {
 	const [$open, set$open] = useState(false)
 
 	return (
@@ -24,3 +24,5 @@ export default () => {
 		</header>
 	)
 }
+
+export default Header

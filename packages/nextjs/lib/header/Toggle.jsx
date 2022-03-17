@@ -3,7 +3,7 @@ import t from 'utils/locale'
 import { IoIosBaseball } from 'react-icons/io'
 import clsx from 'clsx'
 
-export default ({ state }) => {
+const Toggle = ({ state }) => {
 	const [$open, set$open] = state
 
 	return (
@@ -19,3 +19,5 @@ export default ({ state }) => {
 		</button>
 	)
 }
+
+export default Toggle

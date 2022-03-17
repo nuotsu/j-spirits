@@ -4,7 +4,7 @@ import t from 'utils/locale'
 import Head from 'next/head'
 import Block from './block/Block'
 
-export default ({ title, slug, seo, blocks }) => {
+const Page = ({ title, slug, seo, blocks }) => {
 	const { site } = useContext(GlobalContext)
 
 	return <>
@@ -18,3 +18,5 @@ export default ({ title, slug, seo, blocks }) => {
 		))}
 	</>
 }
+
+export default Page

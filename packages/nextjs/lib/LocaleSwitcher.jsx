@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import { useRouter } from 'next/router'
 
-export default ({ className }) => {
+const LocaleSwitcher = ({ className }) => {
 	const { locale, locales } = useContext(GlobalContext)
 	const [$l, set$l] = useState(locale)
 
@@ -31,3 +31,5 @@ export default ({ className }) => {
 		</select>
 	)
 }
+
+export default LocaleSwitcher

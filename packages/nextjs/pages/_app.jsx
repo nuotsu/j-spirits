@@ -3,7 +3,7 @@ import Header from 'lib/header/Header'
 import Footer from 'lib/footer/Footer'
 import 'styles/app.css'
 
-export default ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
 	const { global, locale, ...componentProps } = pageProps
 
 	const value = {
@@ -23,3 +23,5 @@ export default ({ Component, pageProps }) => {
 		</GlobalProvider>
 	)
 }
+
+export default App

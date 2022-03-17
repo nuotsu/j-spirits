@@ -2,7 +2,9 @@ import client from 'utils/sanity'
 import groq from 'utils/groq'
 import Page from 'lib/Page'
 
-export default ({ page }) => <Page {...page} />
+const Pages = ({ page }) => <Page {...page} />
+
+export default Pages
 
 export async function getStaticPaths({ locales }) {
 	const paths = await client.fetch(`

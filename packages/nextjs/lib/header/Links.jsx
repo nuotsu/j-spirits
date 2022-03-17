@@ -4,7 +4,7 @@ import Link from 'next/link'
 import t from 'utils/locale'
 import clsx from 'clsx'
 
-export default ({ $open }) => {
+const Links ({ $open }) => {
 	const { header } = useContext(GlobalContext)
 
 	return (
@@ -21,3 +21,5 @@ export default ({ $open }) => {
 		</nav>
 	)
 }
+
+export default Links

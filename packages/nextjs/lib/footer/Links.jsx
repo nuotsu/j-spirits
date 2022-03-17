@@ -3,7 +3,7 @@ import { GlobalContext } from 'lib/store/Global'
 import Link from 'next/link'
 import t from 'utils/locale'
 
-export default () => {
+const Links () => {
 	const { footer } = useContext(GlobalContext)
 
 	return (
@@ -20,3 +20,5 @@ export default () => {
 		</nav>
 	)
 }
+
+export default Links
