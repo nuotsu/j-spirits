@@ -9,6 +9,10 @@
 		accent-color: theme('colors.j-green-light');
 	}
 
+	#__next {
+		@apply flex flex-col min-h-screen;
+	}
+
 	body {
 		@apply bg-ground-light;
 	}

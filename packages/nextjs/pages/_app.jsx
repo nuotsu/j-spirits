@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }) => {
 		<GlobalProvider value={value}>
 			<Header />
 
-			<main>
+			<main className="flex-grow pb-8">
 				<Component {...componentProps} />
 			</main>
 

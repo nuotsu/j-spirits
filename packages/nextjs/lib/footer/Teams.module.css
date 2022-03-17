@@ -1,0 +1,15 @@
+.root {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem 2rem;
+	padding-block: 2rem;
+	border-top: 1px solid theme('colors.j-green-dark');
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	max-width: 450px;
+}
