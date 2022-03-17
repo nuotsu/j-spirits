@@ -1,0 +1,36 @@
+import Link from 'next/link'
+import t from 'utils/locale'
+import dateformat from 'dateformat'
+import Score from './Score'
+
+const GameCompact = props => {
+	const { date, status } = props
+
+	return (
+		<li class="bg-white text-j-green first-of-type:j-gradient">
+			<Link href={`/games#${ date }`}>
+				<a className="flex flex-col h-full">
+					<div className="flex gap-4 p-2 pb-0 justify-between">
+						<time className="uppercase text-sm" dateTime={date}>
+							{t({
+								en: dateformat(date, 'mmm d', true),
+								ja: dateformat(date, 'm月d日', true)
+							})}
+						</time>
+
+						{status !== 'completed' && (
+							<small className="chip">{status}</small>
+						)}
+					</div>
+
+					<Score
+						className="m-auto py-12 px-4 text-2xl"
+						{...props}
+					/>
+				</a>
+			</Link>
+		</li>
+	)
+}
+
+export default GameCompact

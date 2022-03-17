@@ -1,5 +1,6 @@
 # TODO
 
+- possibly use getServerSideProps for live data on refresh
 - translate seo meta desc
 - scroll margin / :target
 - sitemap

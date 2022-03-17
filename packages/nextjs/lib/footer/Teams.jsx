@@ -11,8 +11,8 @@ const Teams = () => {
 		<div className={css.root}>
 			<h2 className="text-center">
 				<a href="https://www.lasbl-baseball.com/" target="_blank" rel="noopener noreferrer">
-				<span class="text-2xl">LASBL</span>
-				<small class="block text-xs">
+				<span className="text-2xl">LASBL</span>
+				<small className="block text-xs">
 					{t({
 						en: 'Los Angeles Safety Baseball League',
 						ja: 'ロサンゼルス軟式草野球リーグ'

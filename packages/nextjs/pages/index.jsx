@@ -13,7 +13,7 @@ export async function getStaticProps({ locale }) {
 				...,
 				blocks[]{
 					...,
-					link{ ${groq.internalUrl} }
+					link{ ${groq.internalLink} }
 				}
 			},
 			${groq.global}
