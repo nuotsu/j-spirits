@@ -1,0 +1,24 @@
+.item {
+	display: grid;
+	align-items: center;
+	gap: 0.5rem 1rem;
+	padding-block: 0.5rem;
+}
+
+.item + .item {
+	@apply border-t border-ground-light;
+}
+
+.item a {
+	@apply leading-tight;
+}
+
+.item a[href] {
+	@apply hover:underline;
+}
+
+@screen md {
+	.item {
+		grid-template-columns: auto 1fr;
+	}
+}
