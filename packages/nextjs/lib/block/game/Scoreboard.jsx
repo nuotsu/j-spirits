@@ -15,18 +15,18 @@ const Scoreboard = ({ opponent, score }) => {
 	}
 
 	return (
-		<div class="overflow-x-auto j-gradient p-2 <md:full-width">
-			<table class="w-full text-center table-fixed border-separate">
+		<div className="overflow-x-auto j-gradient p-2 <md:full-width">
+			<table className="w-full text-center table-fixed border-separate">
 				<thead>
 					<tr>
-						<th class="w-[120px] <sm:w-[80px]" />
-						<th class="w-[0.25ch]" />
+						<th className="w-[120px] <sm:w-[80px]" />
+						<th className="w-[0.25ch]" />
 
 						{scores[0]?.map((cell, i) => (
 							<th key={i}>{i+1}</th>
 						))}
 
-						<th class="w-[0.25ch]" />
+						<th className="w-[0.25ch]" />
 						<th>R</th>
 					</tr>
 				</thead>

@@ -3,16 +3,17 @@ import Score from './Score'
 import Scoreboard from './Scoreboard'
 import Link from 'next/link'
 import t from 'utils/locale'
+import clsx from 'clsx'
 
-const Game = props => {
+const Game = ({ className, ...props }) => {
 	const { date, opponent, status, score, link } = props
 
 	return (
-		<article id={date} className="grid gap-4 bg-white p-4">
+		<article id={date} className={clsx(className, 'grid gap-4 bg-white text-j-green p-4')}>
 			<Date date={date} />
 
 			<Score
-				className={`${status === 'completed' ? 'text-xl' : 'text-2xl'} text-j-green`}
+				className={`${status === 'completed' ? 'text-xl' : 'text-2xl'}`}
 				{...props}
 			/>
 
@@ -20,7 +21,7 @@ const Game = props => {
 				? <Scoreboard {...props} />
 				: (
 					<p className="text-center">
-						<small className="chip text-j-green-light">
+						<small className="chip">
 							{status}
 						</small>
 					</p>

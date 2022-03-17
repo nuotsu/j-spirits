@@ -6,7 +6,7 @@ const Logo = () => (
 	<div className="self-start">
 		<Link href="/">
 			<a className={css.root}>
-				<DarkLogo height={60} />
+				<DarkLogo className="<md:h-[30px]" height={60} />
 			</a>
 		</Link>
 	</div>
