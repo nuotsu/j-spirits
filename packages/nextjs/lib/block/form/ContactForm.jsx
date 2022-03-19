@@ -9,18 +9,39 @@ const ContactForm = ({ heading }) => (
 
 		<Form name="contact" className={css.form}>
 			<label>
-				<input class="input" name="name" type="text" autocomplete="name" placeholder={t({ en: 'Name', ja: '名前' })} required />
+				<input
+					className="input"
+					name="name"
+					type="text"
+					autoComplete="name"
+					placeholder={t({ en: 'Name', ja: '名前' })}
+					required
+				/>
 			</label>
 
 			<label>
-				<input class="input" name="email" type="email" autocomplete="email" placeholder={t({ en: 'Email', ja: 'メールアドレス' })} required />
+				<input
+					className="input"
+					name="email"
+					type="email"
+					autoComplete="email"
+					placeholder={t({ en: 'Email', ja: 'メールアドレス' })}
+					required
+				/>
 			</label>
 
 			<label>
-				<textarea class="input" name="message" placeholder={t({ en: 'Message', ja: 'メッセージ' })} required />
+				<textarea
+					className="input"
+					name="message"
+					placeholder={t({ en: 'Message', ja: 'メッセージ' })}
+					required
+				/>
 			</label>
 
-			<button class="action">{t({ en: 'Submit', ja: '送信' })}</button>
+			<button className="action">
+				{t({ en: 'Submit', ja: '送信' })}
+			</button>
 		</Form>
 	</section>
 )
