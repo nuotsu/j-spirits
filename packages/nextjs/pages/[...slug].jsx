@@ -8,7 +8,7 @@ export default Pages
 
 export async function getStaticPaths({ locales }) {
 	const paths = await client.fetch(`
-		*[_type == 'page' && slug.current != '/'].slug.current
+		*[_type == 'page' && !(slug.current in ['/', '404'])].slug.current
 	`)
 
 	return {
