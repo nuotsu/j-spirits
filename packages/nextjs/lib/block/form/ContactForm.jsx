@@ -7,7 +7,7 @@ const ContactForm = ({ heading }) => (
 	<section className="section-md">
 		<HTag className="h2 text-center" {...heading} />
 
-		<Form className={css.form} name="contact" action="/contact/thank-you">
+		<Form className={css.form} name="contact" action="contact/thank-you">
 			<label>
 				<input
 					className="input"

@@ -3,7 +3,7 @@ import HTag from 'lib/HTag'
 
 const HeroHome = ({ heading }) => (
 	<section className="max-w-screen-xl mx-auto p-4 text-center">
-		<div className={`${css.inner} j-gradient`}>
+		<div className={`${css.inner} j-gradient shadow-lg`}>
 			<HTag className={css.heading} {...heading} />
 		</div>
 	</section>

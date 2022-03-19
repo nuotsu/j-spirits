@@ -18,7 +18,7 @@ export default {
 			options: {
 				list: [
 					{ title: '🟩 primary button', value: 'action' },
-					{ title: '⬜️ secondary button', value: 'button' },
+					{ title: '⬜️ secondary button', value: 'action-2' },
 					{ title: '🔗 underlined link', value: 'link' },
 				]
 			}

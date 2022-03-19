@@ -7,7 +7,7 @@ const menu = `
 `
 
 const internalLink = `
-	'internalUrl': '/' + link->slug.current,
+	'internalUrl': select(link->slug.current == '/' => '/', '/' + link->slug.current),
 	'page': link->{title},
 	label
 `
