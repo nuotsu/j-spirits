@@ -5,7 +5,7 @@ import Link from 'next/link'
 import t from 'utils/locales'
 import clsx from 'clsx'
 
-const Game = ({ className, ...props }) => {
+const Game = ({ className, detailsLabel, ...props }) => {
 	const { date, opponent, status, score, link } = props
 
 	return (
@@ -32,10 +32,7 @@ const Game = ({ className, ...props }) => {
 				<p className="text-right">
 					<Link href={link}>
 						<a className="link" target="_blank" rel="noopener noreferrer">
-							{t({
-								en: 'View game details',
-								ja: '試合の詳細を見る'
-							})}
+							{t(detailsLabel)}
 						</a>
 					</Link>
 				</p>

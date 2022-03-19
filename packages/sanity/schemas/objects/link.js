@@ -1,4 +1,4 @@
-import { t } from './locales'
+import { localize, t } from './locales'
 
 export const internalLink = {
 	name: 'internalLink',
@@ -10,7 +10,7 @@ export const internalLink = {
 			type: 'reference',
 			to: [{ type: 'page' }],
 		},
-		{ name: 'label', type: 'localeString', },
+		{ name: 'label', ...localize({ type: 'string' }), },
 	],
 	preview: {
 		select: {
@@ -31,7 +31,7 @@ export const externalLink = {
 	type: 'object',
 	fields: [
 		{ name: 'url', title: 'Link', type: 'url', },
-		{ name: 'label', type: 'localeString', },
+		{ name: 'label', ...localize({ type: 'string' }), },
 	],
 	preview: {
 		select: {

@@ -1,5 +1,5 @@
 import { BsFileTextFill } from 'react-icons/bs'
-import { t } from '../objects/locales'
+import { localize, t } from '../objects/locales'
 
 export default {
 	name: 'contentBox',
@@ -7,9 +7,30 @@ export default {
 	icon: BsFileTextFill,
 	type: 'object',
 	fields: [
-		{ name: 'heading', type: 'localeHeading', },
-		{ name: 'richtext', type: 'localeRichtext', },
-		{ name: 'cta', title: 'CTA', type: 'cta', },
+		{
+			name: 'heading',
+			type: 'heading',
+			options: { collapsible: true, collapsed: true, },
+		},
+		{
+			name: 'richtext',
+			options: { collapsible: true, collapsed: true, },
+			...localize({
+				type: 'array',
+				of: [
+					{
+						type: 'block',
+						styles: [{ title: 'Normal', value: 'normal' }],
+					},
+				]
+			}),
+		},
+		{
+			name: 'cta',
+			title: 'CTA',
+			type: 'cta',
+			options: { collapsible: true, collapsed: true, },
+		},
 	],
 	preview: {
 		select: {

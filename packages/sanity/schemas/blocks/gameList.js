@@ -1,5 +1,5 @@
-import { t } from '../objects/locales'
 import { IoBaseballOutline } from 'react-icons/io5'
+import { localize, t } from '../objects/locales'
 
 export default {
 	name: 'gameList',
@@ -7,7 +7,8 @@ export default {
 	icon: IoBaseballOutline,
 	type: 'object',
 	fields: [
-		{ name: 'heading', type: 'localeHeading', },
+		{ name: 'heading', type: 'heading', },
+		{ name: 'detailsLabel', ...localize({ type: 'string' }), },
 	],
 	preview: {
 		select: {

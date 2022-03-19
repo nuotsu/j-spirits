@@ -7,7 +7,7 @@ export default {
 	icon: IoBaseballOutline,
 	type: 'object',
 	fields: [
-		{ name: 'heading', type: 'localeHeading', },
+		{ name: 'heading', type: 'heading', },
 		{ name: 'cta', title: 'CTA', type: 'cta', },
 	],
 	preview: {

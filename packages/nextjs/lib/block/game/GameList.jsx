@@ -3,7 +3,7 @@ import { GlobalContext } from 'lib/store/Global'
 import HTag from 'lib/HTag'
 import Game from './Game'
 
-const GameList = ({ heading }) => {
+const GameList = ({ heading, detailsLabel }) => {
 	const { games } = useContext(GlobalContext)
 
 	return (
@@ -12,7 +12,7 @@ const GameList = ({ heading }) => {
 
 			<div className="grid gap-8">
 				{games?.map((game, key) => (
-					<Game {...game} key={key} />
+					<Game {...game} detailsLabel={detailsLabel} key={key} />
 				))}
 			</div>
 		</section>

@@ -36,7 +36,7 @@ const Scoreboard = ({ opponent, score }) => {
 						<tr key={index}>
 							<th>
 								<Img
-									image={getTeam(index === 0 ? 'JSP' : opponent.name.short).image}
+									image={getTeam(index === 0 ? site.title.short : opponent.name.short).image}
 									builder={b => b.width(120).height(40)}
 									alt={index === 0 ? t(site.title.full) : opponent.name.full}
 								/>

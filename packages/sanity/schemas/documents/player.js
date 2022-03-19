@@ -1,5 +1,6 @@
 import React from 'react'
 import { GoJersey } from 'react-icons/go'
+import { localize } from '../objects/locales'
 
 export default {
 	name: 'player',
@@ -11,7 +12,7 @@ export default {
 		{ name: 'name', type: 'string', },
 		{ name: 'jersey', type: 'number', },
 		{ name: 'position', type: 'string', },
-		{ name: 'title', type: 'localeString', },
+		{ name: 'title', ...localize({ type: 'string' }), },
 		{ name: 'bt', title: 'B/T', type: 'string', },
 	],
 	preview: {

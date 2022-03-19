@@ -7,7 +7,11 @@ export default {
 	icon: MdArtTrack,
 	type: 'object',
 	fields: [
-		{ name: 'heading', type: 'localeHeading', },
+		{
+			name: 'heading',
+			type: 'heading',
+			initialValue: { tag: 'h1' },
+		},
 	],
 	preview: {
 		select: {

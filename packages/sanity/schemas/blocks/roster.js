@@ -7,7 +7,7 @@ export default {
 	icon: GoJersey,
 	type: 'object',
 	fields: [
-		{ name: 'heading', type: 'localeHeading' },
+		{ name: 'heading', type: 'heading' },
 	],
 	preview: {
 		select: {

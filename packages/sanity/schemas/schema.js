@@ -12,8 +12,8 @@ import player from './documents/player'
 import team from './documents/team'
 
 // objects
-import { localeString, localeHeading, localeRichtext } from './objects/locales'
 import { internalLink, externalLink } from './objects/link'
+import heading from './objects/heading'
 import cta from './objects/cta'
 
 // blocks
@@ -40,8 +40,8 @@ export default createSchema({
     team,
 
     // objects
-    localeString, localeHeading, localeRichtext,
     internalLink, externalLink,
+    heading,
     cta,
 
     // blocks

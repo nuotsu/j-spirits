@@ -1,5 +1,5 @@
 import fields from '../fields'
-import { t } from '../objects/locales'
+import { localize, t } from '../objects/locales'
 import { AiFillNotification } from 'react-icons/ai'
 
 export default {
@@ -9,7 +9,7 @@ export default {
 	type: 'document',
 	fields: [
 		{ name: 'date', type: 'date', },
-		{ name: 'title', type: 'localeString', },
+		{ name: 'title', ...localize({ type: 'string' }), },
 		fields.link,
 	],
 	preview: {

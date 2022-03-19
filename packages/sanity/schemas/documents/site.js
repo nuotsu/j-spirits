@@ -1,3 +1,5 @@
+import { localize } from '../objects/locales'
+
 export default {
 	name: 'site',
 	title: 'Site settings',
@@ -8,8 +10,8 @@ export default {
 			name: 'title',
 			type: 'object',
 			fields: [
-				{ name: 'short', type: 'localeString', },
-				{ name: 'full', type: 'localeString', },
+				{ name: 'short', type: 'string', },
+				{ name: 'full', ...localize({ type: 'string' }), },
 			]
 		},
 	],

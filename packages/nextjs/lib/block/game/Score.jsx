@@ -11,13 +11,13 @@ const Score = ({ opponent, status, score, className }) => {
 		<div className={clsx(className, 'flex items-center justify-center gap-2 mx-auto')}>
 			{status === 'completed'
 				? <>
-					{t(site.title.short)}
+					{site.title.short}
 					<b className="text-[2em]">{total(score)}</b>
 					-
 					<b className="text-[2em]">{total(score, 1)}</b>
 					{opponent.name.short}
 				</> : <>
-					<b className="text-[1.5em]">{t(site.title.short)}</b>
+					<b className="text-[1.5em]">{site.title.short}</b>
 					vs
 					<b className="text-[1.5em]">{opponent.name.short}</b>
 				</>

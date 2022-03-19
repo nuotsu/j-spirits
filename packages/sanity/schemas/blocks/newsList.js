@@ -7,7 +7,7 @@ export default {
 	icon: AiFillNotification,
 	type: 'object',
 	fields: [
-		{ name: 'heading', type: 'localeHeading', },
+		{ name: 'heading', type: 'heading', },
 	],
 	preview: {
 		select: {
