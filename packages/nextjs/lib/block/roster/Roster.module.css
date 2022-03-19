@@ -1,0 +1,20 @@
+.table {
+	width: 100%;
+	white-space: normal;
+	text-align: center;
+
+	@apply bg-white;
+}
+
+.table thead th {
+	padding: 0.5em;
+	@apply border-b-2 border-j-green-light;
+}
+
+.table tr:nth-child(odd) td {
+	@apply bg-j-green-light/5;
+}
+
+.table tr:hover td {
+	@apply bg-j-green-light text-white;
+}

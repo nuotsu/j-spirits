@@ -11,5 +11,7 @@ export const defaultLocale = 'en'
 export default translation => {
 	const { locale, defaultLocale } = useContext(GlobalContext)
 
+	if (!translation) return
+
 	return translation[locale] || translation[defaultLocale]
 }
