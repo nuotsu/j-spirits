@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { GlobalContext } from 'lib/store/Global'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import Head from 'next/head'
 import Block from './block/Block'
 
@@ -10,7 +10,7 @@ const Page = ({ title, slug, seo, blocks }) => {
 	return <>
 		<Head>
 			<title>{t(seo.title)} | {t(site.title.full)}</title>
-			<meta name="description" content={seo.description} />
+			<meta name="description" content={t(seo.description)} />
 		</Head>
 
 		{blocks?.map((block, key) => (

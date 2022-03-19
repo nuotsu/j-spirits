@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import clsx from 'clsx'
-import t from 'utils/locale'
+import t from 'utils/locales'
 
 const CTA = ({ link, style, className }) => {
 	const external = link._type === 'externalLink'

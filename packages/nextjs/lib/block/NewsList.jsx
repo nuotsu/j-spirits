@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import HTag from 'lib/HTag'
 import Link from 'next/link'
-import t from 'utils/locale'
+import t from 'utils/locales'
 
 const NewsList = ({ heading }) => {
 	const { news } = useContext(GlobalContext)

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import Link from 'next/link'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import clsx from 'clsx'
 
 const Links = ({ $open }) => {

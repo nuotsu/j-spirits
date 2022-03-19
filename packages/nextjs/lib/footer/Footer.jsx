@@ -4,7 +4,7 @@ import css from './Footer.module.css'
 import Links from './Links'
 import LocaleSwitcher from 'lib/LocaleSwitcher'
 import Teams from './Teams'
-import t from 'utils/locale'
+import t from 'utils/locales'
 
 const Footer = () => {
 	const { site } = useContext(GlobalContext)

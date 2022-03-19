@@ -1,5 +1,5 @@
 import css from './Toggle.module.css'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import { IoIosBaseball } from 'react-icons/io'
 import clsx from 'clsx'
 

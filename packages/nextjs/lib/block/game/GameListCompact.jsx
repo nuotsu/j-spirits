@@ -4,7 +4,7 @@ import { GlobalContext } from 'lib/store/Global'
 import HTag from 'lib/HTag'
 import GameCompact from './GameCompact'
 import Link from 'next/link'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import { IoArrowForwardSharp } from 'react-icons/io5'
 
 const GameListCompact = ({ heading, link }) => {

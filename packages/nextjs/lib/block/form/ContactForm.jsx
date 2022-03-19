@@ -1,7 +1,7 @@
 import css from './ContactForm.module.css'
 import HTag from 'lib/HTag'
-import Form from './Form'
-import t from 'utils/locale'
+import Form from './NetlifyForm'
+import t from 'utils/locales'
 
 const ContactForm = ({ heading }) => (
 	<section className="section-md">
@@ -39,7 +39,7 @@ const ContactForm = ({ heading }) => (
 				/>
 			</label>
 
-			<button className="action">
+			<button className="action" type="submit">
 				{t({ en: 'Submit', ja: '送信' })}
 			</button>
 		</Form>

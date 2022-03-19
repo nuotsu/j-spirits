@@ -2,7 +2,7 @@ import Date from 'lib/Date'
 import Score from './Score'
 import Scoreboard from './Scoreboard'
 import Link from 'next/link'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import clsx from 'clsx'
 
 const Game = ({ className, ...props }) => {

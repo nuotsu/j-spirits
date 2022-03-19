@@ -2,7 +2,7 @@ import css from './Scoreboard.module.css'
 import { useContext } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import Img from 'lib/img/SanityImage'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import { total } from 'utils/game'
 
 const Scoreboard = ({ opponent, score }) => {

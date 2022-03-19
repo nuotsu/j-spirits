@@ -1,4 +1,4 @@
-import t from 'utils/locale'
+import t from 'utils/locales'
 import dateformat from 'dateformat'
 
 const Date = ({ date }) => (

@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import clsx from 'clsx'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import { total } from 'utils/game'
 
 const Score = ({ opponent, status, score, className }) => {

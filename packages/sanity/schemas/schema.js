@@ -12,18 +12,19 @@ import player from './documents/player'
 import team from './documents/team'
 
 // objects
-import { localeHeading, localeString } from './objects/locales'
+import { localeString, localeHeading, localeRichtext } from './objects/locales'
 import { internalLink, externalLink } from './objects/link'
 import cta from './objects/cta'
 
 // blocks
+import contactForm from './blocks/contactForm'
+import contentBox from './blocks/contentBox'
+import gameList from './blocks/gameList'
+import gameListCompact from './blocks/gameListCompact'
 import heroHome from './blocks/heroHome'
 import newsList from './blocks/newsList'
-import gameListCompact from './blocks/gameListCompact'
-import gameList from './blocks/gameList'
-import upcomingGameList from './blocks/upcomingGameList'
 import roster from './blocks/roster'
-import contactForm from './blocks/contactForm'
+import upcomingGameList from './blocks/upcomingGameList'
 
 export default createSchema({
   name: 'default',
@@ -39,17 +40,18 @@ export default createSchema({
     team,
 
     // objects
-    localeString, localeHeading,
+    localeString, localeHeading, localeRichtext,
     internalLink, externalLink,
     cta,
 
     // blocks
+    contactForm,
+    contentBox,
+    gameList,
+    gameListCompact,
     heroHome,
     newsList,
-    gameListCompact,
-    gameList,
-    upcomingGameList,
     roster,
-    contactForm,
+    upcomingGameList,
   ]),
 })

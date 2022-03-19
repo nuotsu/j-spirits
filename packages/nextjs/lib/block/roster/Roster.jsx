@@ -3,7 +3,7 @@ import { useContext, useState } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import HTag from 'lib/HTag'
 import Sort from './Sort'
-import t from 'utils/locale'
+import t from 'utils/locales'
 
 function sortBy(arr, key) {
 	return arr.sort((a, b) => {

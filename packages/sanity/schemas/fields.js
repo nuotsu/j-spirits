@@ -8,6 +8,22 @@ const link = {
 	validation: Rule => Rule.min(0).max(1),
 }
 
+const portableText = ({ styles, of }) => ({
+	name: 'portableText',
+	type: 'array',
+	of: [
+		{
+			type: 'block',
+			styles: [
+				{ title: 'Normal', value: 'normal' },
+				...styles,
+			],
+		},
+		...of,
+	],
+})
+
 export default {
 	link,
+	portableText,
 }

@@ -10,7 +10,7 @@ export default {
 				{ type: 'internalLink' },
 				{ type: 'externalLink' },
 			],
-			validation: Rule => Rule.required().min(1).max(1),
+			validation: Rule => Rule.max(1),
 		},
 		{
 			name: 'style',

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { GlobalContext } from 'lib/store/Global'
-import t from 'utils/locale'
+import t from 'utils/locales'
 import Img from 'lib/img/SanityImage'
 import css from './Teams.module.css'
 

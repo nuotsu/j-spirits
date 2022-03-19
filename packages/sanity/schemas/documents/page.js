@@ -1,3 +1,5 @@
+import { localize } from '../objects/locales'
+
 export default {
 	name: 'page',
 	title: 'Page',
@@ -7,7 +9,7 @@ export default {
 		{ name: 'settings', title: 'Settings' },
 	],
 	fields: [
-		{ name: 'title', type: 'localeString', group: 'settings' },
+		{ name: 'title', ...localize({ type: 'string' }), group: 'settings' },
 		{
 			name: 'slug',
 			type: 'slug',
@@ -27,6 +29,7 @@ export default {
 				{ type: 'gameList' },
 				{ type: 'upcomingGameList' },
 				{ type: 'roster' },
+				{ type: 'contentBox' },
 				{ type: 'contactForm' },
 			],
 		},
@@ -36,13 +39,15 @@ export default {
 			type: 'object',
 			group: 'settings',
 			fields: [
-				{ name: 'title', title: 'Meta title', type: 'localeString', },
+				{ name: 'title', title: 'Meta title', ...localize({ type: 'string' }), },
 				{
 					name: 'description',
 					title: 'Meta description',
-					type: 'text',
-					rows: 3,
-					validation: Rule => Rule.max(160).warning('Recommendation: <160 characters'),
+					...localize({
+						type: 'text',
+						rows: 3,
+						validation: Rule => Rule.max(160).warning('Recommendation: <160 characters'),
+					}),
 				},
 			],
 		},

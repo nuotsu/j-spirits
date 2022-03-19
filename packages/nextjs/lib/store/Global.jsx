@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { locales, defaultLocale } from 'utils/locale'
+import { locales, defaultLocale } from 'utils/locales'
 
 export const GlobalContext = createContext({})
 
