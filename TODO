@@ -1,5 +1,6 @@
 # TODO
 
+- 404
 - possibly use getServerSideProps for live data on refresh
 - translate seo meta desc
 - scroll margin / :target

@@ -24,7 +24,7 @@ export async function getStaticProps({ params, locale }) {
 
 	const { page, ...global } = await client.fetch(`
 		{
-			'page': *[_type == 'page' && slug.current == '${ slug }'][0]{
+			'page': *[_type == 'page' && slug.current == '${ slug.join('/') }'][0]{
 				...,
 				blocks[]{
 					...,

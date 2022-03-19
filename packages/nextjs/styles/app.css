@@ -37,29 +37,19 @@
 		@apply text-j-green underline hover:decoration-2;
 	}
 
-	.action {
-		box-shadow: 4px 4px theme('colors.j-green-dark');
+	.styled-shadow-green { box-shadow: 4px 4px theme('colors.j-green-dark'); }
+	.styled-shadow-ground { box-shadow: 4px 4px theme('colors.ground'); }
+	.styled-shadow-ground-dark { box-shadow: 4px 4px theme('colors.ground-dark'); }
 
-		@apply j-gradient p-2;
-	}
-
-	.action-2 {
-		box-shadow: 4px 4px theme('colors.ground-dark');
-
-		@apply ground-gradient p-2;
-	}
+	.action { @apply j-gradient styled-shadow-green p-2; }
+	.action-2 { @apply ground-gradient styled-shadow-ground-dark p-2; }
 
 	.input {
 		@apply p-2;
 	}
 
-	.h1,.h2 {
-		@apply text-2xl;
-	}
-
-	.h3 {
-		@apply text-xl;
-	}
+	.h1,.h2 { @apply text-2xl; }
+	.h3 { @apply text-xl; }
 
 	.h1,.h2,.h3,.h4,.h5,.h6 {
 		@apply first-letter:text-j-green-light font-bold mb-2;
@@ -80,15 +70,15 @@
 }
 
 @layer utilities {
+	.section-xl { @apply max-w-screen-xl mx-auto py-8 px-4 }
+	.section-lg { @apply max-w-screen-lg mx-auto py-8 px-4 }
+	.section-md { @apply max-w-screen-md mx-auto py-8 px-4 }
+
 	.full-width {
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
 	}
 
-	.j-gradient {
-		@apply bg-gradient-to-tr from-j-green to-j-green-light text-white;
-	}
-	.ground-gradient {
-		@apply bg-gradient-to-tr from-ground to-ground-light;
-	}
+	.j-gradient { @apply bg-gradient-to-tr from-j-green to-j-green-light text-white; }
+	.ground-gradient { @apply bg-gradient-to-tr from-ground to-ground-light; }
 }

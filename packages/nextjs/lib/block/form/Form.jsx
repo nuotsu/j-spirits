@@ -1,7 +1,8 @@
-const Form = ({ name, className, children }) => (
+const Form = ({ name, className, children, ...props }) => (
 	<form
 		name={name}
 		className={className}
+		{...props}
 		data-netlify="true"
 		netlify-honeypot="bot-field"
 	>

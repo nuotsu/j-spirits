@@ -4,10 +4,10 @@ import Form from './Form'
 import t from 'utils/locale'
 
 const ContactForm = ({ heading }) => (
-	<section className="max-w-screen-md mx-auto px-4">
+	<section className="section-md">
 		<HTag className="h2 text-center" {...heading} />
 
-		<Form name="contact" className={css.form}>
+		<Form className={css.form} name="contact" action="/contact/thank-you">
 			<label>
 				<input
 					className="input"

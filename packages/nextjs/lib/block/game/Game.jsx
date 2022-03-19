@@ -9,7 +9,7 @@ const Game = ({ className, ...props }) => {
 	const { date, opponent, status, score, link } = props
 
 	return (
-		<article id={date} className={clsx(className, 'grid gap-4 bg-white text-j-green p-4')}>
+		<article id={date} className={clsx(className, 'grid gap-4 bg-white text-j-green p-4 styled-shadow-ground')}>
 			<Date date={date} />
 
 			<Score

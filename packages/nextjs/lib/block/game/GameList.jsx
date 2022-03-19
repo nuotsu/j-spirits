@@ -7,7 +7,7 @@ const GameList = ({ heading }) => {
 	const { games } = useContext(GlobalContext)
 
 	return (
-		<section className="max-w-screen-lg mx-auto p-4">
+		<section className="section-lg">
 			<HTag className="h2" {...heading} />
 
 			<div className="grid gap-8">

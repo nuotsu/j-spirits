@@ -9,12 +9,16 @@ const UpcomingGameList = ({ heading, cta }) => {
 	const { upcomingGames } = useContext(GlobalContext)
 
 	return (
-		<section className="max-w-screen-lg mx-auto p-4">
+		<section className="section-xl">
 			<HTag className="h2" {...heading} />
 
 			<div className={css.list}>
 				{upcomingGames?.map((game, key) => (
-					<Game className="first-of-type:j-gradient" {...game} key={key} />
+					<Game
+						className="first-of-type:j-gradient first-of-type:styled-shadow-green"
+						{...game}
+						key={key}
+					/>
 				))}
 			</div>
 

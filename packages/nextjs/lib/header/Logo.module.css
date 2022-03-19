@@ -5,7 +5,7 @@
 	background-color: #fff;
 	padding: 1rem 1rem 0;
 
-	@apply drop-shadow-sm <sm:mb-4 <md:mx-auto;
+	@apply drop-shadow <sm:mb-4 <md:mx-auto;
 }
 
 .root::after {

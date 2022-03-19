@@ -18,10 +18,10 @@ const Roster = ({ heading }) => {
 	const [$sort, set$sort] = useState('jersey')
 
 	return (
-		<section className="max-w-screen-xl mx-auto px-4">
+		<section className="section-xl">
 			<HTag className="h2 text-center" {...heading} />
 
-			<div className="overflow-x-auto <md:full-width">
+			<div className="overflow-x-auto <md:full-width styled-shadow-ground">
 				<table className={css.table}>
 					<thead>
 						<tr>
