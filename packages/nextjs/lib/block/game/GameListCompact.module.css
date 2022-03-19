@@ -1,7 +1,9 @@
 .list {
+	--offset: 0.5ch;
 	display: flex;
 	gap: 1rem;
 	overflow-x: auto;
+	padding-bottom: var(--offset);
 	scroll-snap-type: x proximity;
 
 	@apply <md:px-4;

@@ -19,7 +19,7 @@ const UpcomingGameList = ({ heading, cta }) => {
 			</div>
 
 			{!!cta && (
-				<p class="text-center mt-8">
+				<p className="text-center mt-8">
 					<CTA className="px-4" {...cta} />
 				</p>
 			)}

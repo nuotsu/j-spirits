@@ -21,7 +21,7 @@ const Footer = () => {
 			</div>
 
 			<p className="bg-j-green-dark p-4 text-center text-xs">
-				&copy; {new Date().getFullYear()} {t(site.title.full)}.
+				&copy; {new Date().getFullYear()} {t(site?.title.full)}.
 				All Rights Reserved.
 			</p>
 		</footer>

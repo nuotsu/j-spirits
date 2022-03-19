@@ -16,7 +16,7 @@ const NewsList = ({ heading }) => {
 				{news?.map(({ date, title, link}, key) => (
 					<li className={css.item} key={key}>
 						<time
-							class="text-j-green-light md:w-[8ch]"
+							className="text-j-green-light md:w-[8ch]"
 							dateTime={date}
 						>
 							{date.replace(/-/g, '.')}

@@ -1,3 +1,4 @@
+import css from './GameCompact.module.css'
 import Link from 'next/link'
 import Date from 'lib/Date'
 import Score from './Score'
@@ -6,7 +7,7 @@ const GameCompact = props => {
 	const { date, status } = props
 
 	return (
-		<li className="bg-white text-j-green first-of-type:j-gradient">
+		<li className={`${css.root} first-of-type:j-gradient`}>
 			<Link href={`/games#${ date }`}>
 				<a className="flex flex-col h-full">
 					<div className="flex gap-4 p-2 pb-0 justify-between">

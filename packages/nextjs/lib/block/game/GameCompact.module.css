@@ -1,0 +1,11 @@
+.root {
+	@apply bg-white text-j-green transition-shadow;
+}
+
+.root:hover {
+	box-shadow: var(--offset) var(--offset) 0 var(--shadow-color, theme('colors.ground'));
+}
+
+.root:first-of-type:hover {
+	--shadow-color: theme('colors.j-green');
+}
