@@ -13,7 +13,7 @@ const Links = ({ $open }) => {
 
 	return (
 		<nav className={clsx(!$open && '<md:hidden')}>
-			<ul className={`${css.list} <md:full-width`}>
+			<ul className={css.list}>
 				{header?.menu?.map(({ link, label }, key) => (
 					<li key={key}>
 						{console.log(router.asPath, link.url)}

@@ -2,7 +2,7 @@
 	display: flex;
 	gap: 0 2rem;
 
-	@apply <md:flex-col <md:pr-4;
+	@apply <md:flex-col;
 }
 
 .link {
