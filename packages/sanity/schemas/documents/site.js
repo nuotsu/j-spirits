@@ -1,4 +1,4 @@
-import { localize } from '../objects/locales'
+import { localize } from '../locales'
 
 export default {
 	name: 'site',

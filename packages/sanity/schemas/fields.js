@@ -1,3 +1,5 @@
+import { localize } from './locales'
+
 const link = {
 	name: 'link',
 	type: 'array',
@@ -8,22 +10,30 @@ const link = {
 	validation: Rule => Rule.min(0).max(1),
 }
 
-const portableText = ({ styles, of }) => ({
-	name: 'portableText',
-	type: 'array',
-	of: [
-		{
-			type: 'block',
-			styles: [
-				{ title: 'Normal', value: 'normal' },
-				...styles,
-			],
-		},
-		...of,
-	],
+const richtext = ({
+	schema = {},
+	styles = [],
+	of = [],
+} = {}) => ({
+	name: 'richtext',
+	options: { collapsible: true, collapsed: true, },
+	...schema,
+	...localize({
+		type: 'array',
+		of: [
+			{
+				type: 'block',
+				styles: [
+					{ title: 'Normal', value: 'normal' },
+					...styles,
+				],
+			},
+			...of,
+		],
+	}),
 })
 
 export default {
 	link,
-	portableText,
+	richtext,
 }

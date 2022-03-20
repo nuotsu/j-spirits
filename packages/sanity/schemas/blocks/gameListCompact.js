@@ -1,4 +1,4 @@
-import { t } from '../objects/locales'
+import { t } from '../locales'
 import { IoBaseballOutline } from 'react-icons/io5'
 
 export default {

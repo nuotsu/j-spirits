@@ -1,4 +1,4 @@
-import { localize, t } from './locales'
+import { localize, t } from '../locales'
 
 export const internalLink = {
 	name: 'internalLink',

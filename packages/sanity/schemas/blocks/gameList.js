@@ -1,5 +1,5 @@
 import { IoBaseballOutline } from 'react-icons/io5'
-import { localize, t } from '../objects/locales'
+import { localize, t } from '../locales'
 
 export default {
 	name: 'gameList',

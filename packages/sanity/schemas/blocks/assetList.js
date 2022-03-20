@@ -1,5 +1,6 @@
 import { IoIosImages } from 'react-icons/io'
-import { localize } from '../objects/locales'
+import { localize, t } from '../locales'
+import fields from '../fields'
 
 export default {
 	name: 'assetList',
@@ -7,6 +8,8 @@ export default {
 	icon: IoIosImages,
 	type: 'object',
 	fields: [
+		{ name: 'heading', type: 'heading', },
+		fields.richtext(),
 		{
 			name: 'assets',
 			type: 'array',
@@ -22,11 +25,11 @@ export default {
 	],
 	preview: {
 		select: {
-			assets: 'assets',
+			heading: 'heading.text',
 		},
-		prepare({ assets }) {
+		prepare({ heading }) {
 			return {
-				title: `${assets?.length || 0} asset${assets?.length == 1 ? '' : 's'}`,
+				title: t(heading),
 				subtitle: 'Asset list',
 			};
 		},

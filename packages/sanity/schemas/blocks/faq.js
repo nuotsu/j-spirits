@@ -1,5 +1,5 @@
 import { RiQuestionFill } from 'react-icons/ri'
-import { localize, t } from '../objects/locales'
+import { localize, t } from '../locales'
 
 export const faq = {
 	name: 'faq',

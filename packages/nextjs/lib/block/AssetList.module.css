@@ -1,0 +1,39 @@
+.list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.asset {
+	padding: 3px;
+}
+
+.img {
+	position: relative;
+	display: block;
+	padding: 1rem;
+	background:
+		repeating-conic-gradient(var(--tile-1, #eee) 0% 25%, var(--tile-2, #fff) 0% 50%)
+		50% / 20px 20px;
+}
+
+.img:hover {
+	--tile-1: #ccc;
+	--tile-2: #ddd;
+}
+
+.img img {
+	@apply m-auto h-[100px] w-full bg-contain;
+}
+
+.download {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	@apply p-1 text-j-green;
+}
+
+.caption {
+	@apply p-2 text-center;
+}

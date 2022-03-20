@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 
+const AssetList = dynamic(() => import('./AssetList'))
 const ContactForm = dynamic(() => import('./form/ContactForm'))
 const ContentBox = dynamic(() => import('./ContentBox'))
 const FAQList = dynamic(() => import('./FAQList'))
@@ -12,6 +13,7 @@ const UpcomingGameList = dynamic(() => import('./game/UpcomingGameList'))
 
 const Block = ({ _type, ...props }) => {
 	switch (_type) {
+		case 'assetList': return <AssetList {...props} />
 		case 'contactForm': return <ContactForm {...props} />
 		case 'contentBox': return <ContentBox {...props} />
 		case 'faqList': return <FAQList {...props} />

@@ -1,7 +1,7 @@
 # TODO
 
 - possibly use getServerSideProps for live data on refresh
-- scroll margin / :target
+- breadcrumbs
 - sitemap
 - test netlify form
 - redirect sanity to /admin

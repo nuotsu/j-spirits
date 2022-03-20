@@ -1,4 +1,4 @@
-import { t } from '../objects/locales'
+import { t } from '../locales'
 import { AiFillNotification } from 'react-icons/ai'
 
 export default {

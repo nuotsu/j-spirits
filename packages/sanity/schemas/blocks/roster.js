@@ -1,5 +1,5 @@
 import { GoJersey } from 'react-icons/go'
-import { t } from '../objects/locales'
+import { t } from '../locales'
 
 export default {
 	name: 'roster',

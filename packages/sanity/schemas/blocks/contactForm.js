@@ -1,5 +1,5 @@
 import { ImClipboard } from 'react-icons/im'
-import { t } from '../objects/locales'
+import { t } from '../locales'
 
 export default {
 	name: 'contactForm',

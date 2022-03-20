@@ -1,5 +1,5 @@
 import fields from '../fields'
-import { localize, t } from '../objects/locales'
+import { localize, t } from '../locales'
 import { AiFillNotification } from 'react-icons/ai'
 
 export default {
