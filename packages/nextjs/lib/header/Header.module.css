@@ -28,7 +28,7 @@
 
 @screen <md {
 	.root.open {
-		@apply bg-ground/90;
+		@apply bg-ground-light/90 shadow-xl;
 	}
 
 	.root:not(.open) {

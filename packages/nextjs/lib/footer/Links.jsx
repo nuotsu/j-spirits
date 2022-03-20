@@ -9,13 +9,15 @@ const Links = () => {
 
 	return (
 		<nav>
-			<ul className="flex items-center gap-4">
+			<ul className="flex flex-wrap items-center justify-center gap-4">
 				{footer?.menu?.map(({ link, label }, key) => (
 					<li key={key}>
 						<Link href={link.url}>
 							{link.url === '/'
-								? <a title={t(label || link.title)}><Homeplate className="text-2xl" /></a>
-								: t(label || link.title)
+								? <a className="hover:underline" title={t(label || link.title)}>
+									<Homeplate className="text-2xl" />
+								</a>
+								: <a className="hover:underline">{t(label || link.title)}</a>
 							}
 						</Link>
 					</li>

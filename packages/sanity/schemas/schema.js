@@ -19,12 +19,14 @@ import cta from './objects/cta'
 // blocks
 import contactForm from './blocks/contactForm'
 import contentBox from './blocks/contentBox'
+import { faq, faqList } from './blocks/faq'
 import gameList from './blocks/gameList'
 import gameListCompact from './blocks/gameListCompact'
 import heroHome from './blocks/heroHome'
 import newsList from './blocks/newsList'
 import roster from './blocks/roster'
 import upcomingGameList from './blocks/upcomingGameList'
+import assetList from './blocks/assetList'
 
 export default createSchema({
   name: 'default',
@@ -45,8 +47,10 @@ export default createSchema({
     cta,
 
     // blocks
+    assetList,
     contactForm,
     contentBox,
+    faqList, faq,
     gameList,
     gameListCompact,
     heroHome,

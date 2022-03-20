@@ -40,7 +40,7 @@ export default {
 			return {
 				title: t(heading),
 				subtitle: 'Content box',
-			};
+			}
 		},
 	},
 }

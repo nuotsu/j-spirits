@@ -20,7 +20,7 @@ export default {
 		prepare({ heading }) {
 			return {
 				title: t(heading),
-			};
+			}
 		},
 	},
 }

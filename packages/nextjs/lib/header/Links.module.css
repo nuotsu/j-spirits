@@ -1,0 +1,21 @@
+.list {
+	display: flex;
+	gap: 0 2rem;
+
+	@apply <md:flex-col <md:pr-4;
+}
+
+.link {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 0.5ch;
+
+	@apply font-bold text-lg text-j-green <md:px-4 <md:py-2;
+}
+
+.active {
+	position: relative;
+
+	@apply <md:bg-ground/50 <md:rounded-r-lg;
+}

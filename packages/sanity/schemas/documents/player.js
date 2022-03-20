@@ -27,7 +27,7 @@ export default {
 				title: name,
 				subtitle: [position, title].filter(Boolean).join` / `,
 				media: () => <span>{jersey}</span>,
-			};
+			}
 		},
 	},
 	orderings: [

@@ -31,7 +31,7 @@ const Game = ({ className, detailsLabel, ...props }) => {
 			{!!link && (
 				<p className="text-right">
 					<Link href={link}>
-						<a className="link" target="_blank" rel="noopener noreferrer">
+						<a className="link text-j-green-light" target="_blank" rel="noopener noreferrer">
 							{t(detailsLabel)}
 						</a>
 					</Link>

@@ -16,7 +16,7 @@ const GameListCompact = ({ heading, link }) => {
 		<section className="section-xl">
 			<HTag className="h2" {...heading} />
 
-			<ul className={`${css.list} <md:full-width`}>
+			<ul className={`${css.list} no-scrollbar <md:full-width`}>
 				{!!nextGame && (
 					<GameCompact {...nextGame} />
 				)}

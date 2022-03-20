@@ -10,7 +10,7 @@ const Footer = () => {
 	const { site } = useContext(GlobalContext)
 
 	return (
-		<footer className="bg-j-green text-white">
+		<footer className="relative z-[1] bg-j-green text-white">
 			<div className="max-w-screen-xl mx-auto px-4">
 				<div className={css.top}>
 					<Links />

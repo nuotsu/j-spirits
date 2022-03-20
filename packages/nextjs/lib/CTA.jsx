@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Homeplate from './Homeplate'
 import { MdOpenInNew } from 'react-icons/md'
 import clsx from 'clsx'
+import newtab from 'utils/newtab'
 import t from 'utils/locales'
 
 const CTA = ({ link, style, className }) => {
@@ -9,13 +10,9 @@ const CTA = ({ link, style, className }) => {
 
 	const external = link._type === 'externalLink'
 
-	const newtab = external
-		? { target: '_blank', rel: 'noopener noreferrer' }
-		: {}
-
 	return (
 		<Link href={link.internalUrl || link.url}>
-			<a className={clsx(className, style)} {...newtab}>
+			<a className={clsx(className, style)} {...newtab(external)}>
 				{(link.internalUrl === '/' && style !== 'link') && <Homeplate />}
 
 				{t(link.label || link.page.title)}

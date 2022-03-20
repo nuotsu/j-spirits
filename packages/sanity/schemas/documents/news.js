@@ -22,7 +22,7 @@ export default {
 				title: t(title),
 				media: false,
 				...selection,
-			};
+			}
 		},
 	},
 }

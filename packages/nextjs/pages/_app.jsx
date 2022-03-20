@@ -1,6 +1,7 @@
 import { GlobalProvider } from 'lib/store/Global'
 import Header from 'lib/header/Header'
 import Footer from 'lib/footer/Footer'
+import css from './_app.module.css'
 import 'styles/app.css'
 
 const App = ({ Component, pageProps }) => {
@@ -15,7 +16,7 @@ const App = ({ Component, pageProps }) => {
 		<GlobalProvider value={value}>
 			<Header />
 
-			<main className="flex-grow pb-8">
+			<main className={css.main}>
 				<Component {...componentProps} />
 			</main>
 

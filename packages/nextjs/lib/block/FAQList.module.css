@@ -1,0 +1,42 @@
+.details {
+	border-bottom: 1px solid theme('colors.ground');
+}
+
+.details[open] .question {
+	--content: '-';
+
+	@apply text-j-green-light;
+}
+
+.question::-webkit-details-marker { display: none; }
+
+.question {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	gap: 0.5ch;
+	outline: none;
+
+	@apply font-bold text-lg hover:text-j-green-light py-4;
+}
+
+.question::after {
+	content: var(--content, '+');
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.answer {
+	@apply mb-6;
+}
+
+.details[open] .answer {
+	animation: appear 0.2s ease-in-out forwards;
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+		transform: translateY(-1rem);
+	}
+}

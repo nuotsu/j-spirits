@@ -48,7 +48,7 @@ export default {
 					? `JSP ${total(score)} - ${total(score, 1)} ${opponent || 'Opponent'}`
 					: `JSP vs ${opponent || 'Opponent'}`,
 				...selection,
-			};
+			}
 		},
 	},
 }

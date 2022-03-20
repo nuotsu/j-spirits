@@ -1,5 +1,5 @@
 import HTag from 'lib/HTag'
-import PT from 'lib/PT'
+import PT from 'lib/pt/PT'
 import CTA from 'lib/CTA'
 
 const ContentBox = ({ heading, richtext, cta }) => (

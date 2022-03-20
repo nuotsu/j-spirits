@@ -20,7 +20,7 @@ export const internalLink = {
 		prepare({ title, label }) {
 			return {
 				title: t(label || title),
-			};
+			}
 		},
 	},
 }
@@ -42,7 +42,7 @@ export const externalLink = {
 			return {
 				title: t(title),
 				subtitle,
-			};
+			}
 		},
 	},
 }

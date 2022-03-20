@@ -32,10 +32,14 @@
 		fill: currentColor;
 	}
 
+	summary {
+		cursor: pointer;
+	}
+
 	:focus-visible {
 		outline-offset: 2px;
 
-		@apply outline-1 outline-dashed outline-j-green/50;
+		@apply outline-1 outline-dashed outline-j-red/50;
 	}
 
 	:target {
@@ -51,7 +55,7 @@
 
 @layer components {
 	.link {
-		@apply text-j-green underline hover:decoration-2;
+		@apply underline hover:decoration-2;
 	}
 
 	.styled-shadow-green { box-shadow: 4px 4px theme('colors.j-green-dark'); }
@@ -87,17 +91,42 @@
 
 		@apply technical;
 	}
+
+	.starred { position: relative; }
+	.starred > * { @apply relative z-[1]; }
+	.starred::after {
+		pointer-events: none;
+		content: '★';
+		position: absolute;
+		left: 90%;
+		top: 10%;
+		transform: translate(-50%, -50%) rotate(-12deg);
+		font-size: var(--size, 0.8em);
+		animation: starred 0.5s ease-in-out forwards;
+		@apply text-j-red/50;
+	}
+
+	@keyframes starred {
+		from {
+			opacity: 0;
+			transform: translate(-150%, -25%) rotate(-90deg) scale(0.5);
+		}
+	}
 }
 
 @layer utilities {
-	.section-xl { @apply max-w-screen-xl mx-auto py-8 px-4 }
-	.section-lg { @apply max-w-screen-lg mx-auto py-8 px-4 }
-	.section-md { @apply max-w-screen-md mx-auto py-8 px-4 }
-
 	.full-width {
 		width: 100vw;
 		margin-inline: calc(50% - 50vw);
 	}
+
+	.no-scrollbar { scrollbar-width: none; }
+	.no-scrollbar::-webkit-scrollbar { display: none; }
+
+	._section { @apply mx-auto py-8 px-4; }
+	.section-xl { @apply _section max-w-screen-xl }
+	.section-lg { @apply _section max-w-screen-lg }
+	.section-md { @apply _section max-w-screen-md }
 
 	.j-gradient { @apply bg-gradient-to-tr from-j-green to-j-green-light text-white; }
 	.ground-gradient { @apply bg-gradient-to-tr from-ground to-ground-light; }
