@@ -15,7 +15,7 @@ const UpcomingGameList = ({ heading, cta }) => {
 			<div className={css.list}>
 				{upcomingGames?.map((game, key) => (
 					<Game
-						className="first-of-type:j-gradient first-of-type:styled-shadow-green"
+						className="first-of-type:gradient-green first-of-type:styled-shadow-green"
 						{...game}
 						key={key}
 					/>

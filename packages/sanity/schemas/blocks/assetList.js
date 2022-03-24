@@ -1,5 +1,5 @@
 import { IoIosImages } from 'react-icons/io'
-import { localize, t } from '../locales'
+import { t } from '../locales'
 import fields from '../fields'
 
 export default {
@@ -10,18 +10,7 @@ export default {
 	fields: [
 		{ name: 'heading', type: 'heading', },
 		fields.richtext(),
-		{
-			name: 'assets',
-			type: 'array',
-			of: [
-				{
-					type: 'image',
-					fields: [
-						{ name: 'title', ...localize({ type: 'string' }), },
-					]
-				},
-			],
-		},
+		{ name: 'assets', ...fields.img, },
 	],
 	preview: {
 		select: {

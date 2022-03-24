@@ -11,11 +11,11 @@
 	align-items: center;
 	gap: 0.5ch;
 
-	@apply font-bold text-lg text-j-green <md:px-4 <md:py-2;
+	@apply font-bold text-lg text-j-green <md:px-2 <md:py-2;
 }
 
 .active {
 	position: relative;
 
-	@apply <md:bg-ground/50 <md:rounded-r-lg;
+	@apply <md:bg-ground/50 <md:rounded-lg;
 }

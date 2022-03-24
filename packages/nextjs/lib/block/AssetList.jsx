@@ -14,7 +14,7 @@ const AssetList = ({ heading, richtext, assets }) => (
 
 		<div className={css.list}>
 			{assets?.map(({ asset, title }, key) => (
-				<figure className={`${css.asset} j-gradient`} key={key}>
+				<figure className={`${css.asset} gradient-green`} key={key}>
 					<a
 						className={css.img}
 						href={urlFor(asset).url()}
@@ -24,7 +24,7 @@ const AssetList = ({ heading, richtext, assets }) => (
 					>
 						<Img
 							image={asset}
-							builder={b => b.height(50)}
+							builder={b => b.height(100)}
 							alt={t(title)}
 						/>
 

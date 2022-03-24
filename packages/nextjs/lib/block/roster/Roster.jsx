@@ -43,7 +43,7 @@ const Roster = ({ heading }) => {
 					<tbody>
 						{sortBy(roster, $sort)?.map((player, key) => (
 							<tr key={key}>
-								<td class="font-bold text-j-green-light">{player.jersey}</td>
+								<td class="font-bold text-j-green-light text-xl">{player.jersey}</td>
 								<td>{player.name}</td>
 								<td>{player.position || ''}</td>
 								<td>{t(player.title)}</td>

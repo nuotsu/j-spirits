@@ -27,6 +27,7 @@ export default {
 				{ type: 'contactForm' },
 				{ type: 'contentBox' },
 				{ type: 'faqList' },
+				{ type: 'gallery' },
 				{ type: 'gameList' },
 				{ type: 'gameListCompact' },
 				{ type: 'heroHome' },

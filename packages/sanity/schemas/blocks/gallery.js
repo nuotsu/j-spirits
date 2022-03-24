@@ -1,25 +1,27 @@
-import { ImClipboard } from 'react-icons/im'
+import { IoMdImages } from 'react-icons/io'
 import fields from '../fields'
 import { t } from '../locales'
 
 export default {
-	name: 'contactForm',
-	title: 'Contact form',
-	icon: ImClipboard,
+	name: 'gallery',
+	title: 'Gallery',
+	icon: IoMdImages,
 	type: 'object',
 	fields: [
 		{ name: 'heading', type: 'heading', },
-		fields.richtext(),
+		{ name: 'images', ...fields.img, },
 	],
 	preview: {
 		select: {
 			heading: 'heading.text',
+			media: 'images.0',
 		},
-		prepare({ heading }) {
+		prepare({ heading, ...selection }) {
 			return {
 				title: t(heading),
-				subtitle: 'Contact form',
-			}
+				subtitle: 'Gallery',
+				...selection
+			};
 		},
 	},
 }

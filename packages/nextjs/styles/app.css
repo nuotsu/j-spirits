@@ -63,9 +63,10 @@
 	.styled-shadow-ground-dark { box-shadow: 4px 4px theme('colors.ground-dark'); }
 
 	._btn { @apply inline-flex items-center justify-center gap-[0.5ch] p-2; }
+	._btn > * { @apply flex-shrink-0; }
 
-	.action { @apply _btn j-gradient styled-shadow-green; }
-	.action-2 { @apply _btn ground-gradient styled-shadow-ground-dark; }
+	.action { @apply _btn gradient-green styled-shadow-green; }
+	.action-2 { @apply _btn gradient-ground styled-shadow-ground-dark; }
 
 	.input {
 		@apply p-2;
@@ -116,7 +117,6 @@
 
 @layer utilities {
 	.full-width {
-		width: 100vw;
 		margin-inline: calc(50% - 50vw);
 	}
 
@@ -128,8 +128,9 @@
 	.section-lg { @apply _section max-w-screen-lg }
 	.section-md { @apply _section max-w-screen-md }
 
-	.j-gradient { @apply bg-gradient-to-tr from-j-green to-j-green-light text-white; }
-	.ground-gradient { @apply bg-gradient-to-tr from-ground to-ground-light; }
+	.gradient-green { @apply bg-gradient-to-tr from-j-green to-j-green-light text-white; }
+	.gradient-green-dark { @apply bg-gradient-to-tr from-j-green-dark to-j-green text-white; }
+	.gradient-ground { @apply bg-gradient-to-tr from-ground to-ground-light; }
 
 	.prose-spacing > * + * {
 		margin-top: 1em;

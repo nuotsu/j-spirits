@@ -2,10 +2,14 @@ import css from './ContactForm.module.css'
 import HTag from 'lib/HTag'
 import Form from './NetlifyForm'
 import t from 'utils/locales'
+import PT from 'lib/pt/PT'
 
-const ContactForm = ({ heading }) => (
+const ContactForm = ({ heading, richtext }) => (
 	<section className="section-md">
-		<HTag className="h2 text-center" {...heading} />
+		<header className="text-center mb-8">
+			<HTag className="h2 text-center" {...heading} />
+			<PT value={richtext} />
+		</header>
 
 		<Form className={css.form} name="contact" action="contact/thank-you">
 			<label>
@@ -32,7 +36,8 @@ const ContactForm = ({ heading }) => (
 
 			<label>
 				<textarea
-					className="input"
+					className="input min-h-[4em]"
+					rows={3}
 					name="message"
 					placeholder={t({ en: 'Message', ja: 'メッセージ' })}
 					required

@@ -15,7 +15,7 @@ const Scoreboard = ({ opponent, score }) => {
 	}
 
 	return (
-		<div className="overflow-x-auto j-gradient p-2 <md:full-width">
+		<div className="overflow-x-auto gradient-green p-2 <md:full-width">
 			<table className="w-full text-center table-fixed border-separate">
 				<thead>
 					<tr>

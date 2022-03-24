@@ -28,7 +28,7 @@ const GameListCompact = ({ heading, link }) => {
 				<li className="self-center">
 					<Link href={link.internalUrl}>
 						<a
-							className={`${css.btn} ground-gradient`}
+							className={`${css.btn} gradient-ground`}
 							title={t(link.label || link.page.title)}
 						>
 							<IoArrowForwardSharp className={css.icon} />

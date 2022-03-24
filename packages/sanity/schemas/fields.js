@@ -10,11 +10,7 @@ const link = {
 	validation: Rule => Rule.min(0).max(1),
 }
 
-const richtext = ({
-	schema = {},
-	styles = [],
-	of = [],
-} = {}) => ({
+const richtext = ({ schema = {}, styles = [], of = [], } = {}) => ({
 	name: 'richtext',
 	options: { collapsible: true, collapsed: true, },
 	...schema,
@@ -33,7 +29,20 @@ const richtext = ({
 	}),
 })
 
+const img = {
+	type: 'array',
+	of: [
+		{
+			type: 'image',
+			fields: [
+				{ name: 'title', ...localize({ type: 'string' }), },
+			]
+		},
+	],
+}
+
 export default {
 	link,
 	richtext,
+	img,
 }

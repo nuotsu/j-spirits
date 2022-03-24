@@ -5,7 +5,7 @@ const Sort = ({ by, state,  children }) => {
 
 	return (
 		<button
-			className="flex gap-[0.5ch] items-center justify-center w-full font-inherit"
+			className="flex gap-[0.5ch] items-center justify-center w-full font-bold"
 			onClick={() => set$sort(by)}
 		>
 			{children}

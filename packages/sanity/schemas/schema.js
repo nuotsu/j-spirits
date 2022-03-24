@@ -20,6 +20,7 @@ import cta from './objects/cta'
 import contactForm from './blocks/contactForm'
 import contentBox from './blocks/contentBox'
 import { faq, faqList } from './blocks/faq'
+import gallery from './blocks/gallery'
 import gameList from './blocks/gameList'
 import gameListCompact from './blocks/gameListCompact'
 import heroHome from './blocks/heroHome'
@@ -51,6 +52,7 @@ export default createSchema({
     contactForm,
     contentBox,
     faqList, faq,
+    gallery,
     gameList,
     gameListCompact,
     heroHome,

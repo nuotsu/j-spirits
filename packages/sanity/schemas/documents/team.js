@@ -5,6 +5,7 @@ export default {
 	title: 'Team',
 	icon: GiBilledCap,
 	type: 'document',
+	liveEdit: true,
 	fields: [
 		{
 			name: 'name',

@@ -7,7 +7,7 @@ const GameCompact = props => {
 	const { date, status } = props
 
 	return (
-		<li className={`${css.root} styled-shadow-ground first-of-type:j-gradient first-of-type:styled-shadow-green`}>
+		<li className={`${css.root} styled-shadow-ground first-of-type:gradient-green first-of-type:styled-shadow-green`}>
 			<Link href={`/games#${ date }`}>
 				<a className="flex flex-col h-full">
 					<div className="flex gap-4 p-2 pb-0 justify-between">

@@ -16,8 +16,6 @@ const Links = ({ $open }) => {
 			<ul className={css.list}>
 				{header?.menu?.map(({ link, label }, key) => (
 					<li key={key}>
-						{console.log(router.asPath, link.url)}
-
 						<Link href={link.url}>
 							<a className={clsx(css.link, router.asPath === link.url && `${css.active} md:starred`)}>
 								<span>{t(label || link.title)}</span>
