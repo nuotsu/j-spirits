@@ -2,9 +2,9 @@ import client from 'utils/sanity'
 import groq from 'utils/groq'
 import Page from 'lib/Page'
 
-const Pg404 = ({ page }) => <Page {...page} />
+const Pg500 = ({ page }) => <Page {...page} />
 
-export default Pg404
+export default Pg500
 
 export async function getStaticProps({ locale }) {
 	const { page, ...global } = await client.fetch(`
