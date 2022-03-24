@@ -1,11 +1,4 @@
 # TODO
 
-- gallery
 - about
-- join our team
-- sponsors
-- possibly use getServerSideProps for live data on refresh
-- breadcrumbs
-- sitemap
 - test netlify form
-- redirect sanity to /admin
