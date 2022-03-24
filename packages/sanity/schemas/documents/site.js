@@ -14,6 +14,7 @@ export default {
 				{ name: 'full', ...localize({ type: 'string' }), },
 			]
 		},
+		{ name: 'seoImage', title: 'SEO image', type: 'image', },
 	],
 	preview: {
 		prepare() {
