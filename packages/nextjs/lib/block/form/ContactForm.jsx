@@ -12,10 +12,10 @@ const ContactForm = ({ heading, richtext }) => (
 		</header>
 
 		<Form className={css.form} name="contact" action="contact/thank-you">
-			<label>
+			<label htmlFor="name">
 				<input
 					className="input"
-					name="name"
+					id="name" name="name"
 					type="text"
 					autoComplete="name"
 					placeholder={t({ en: 'Name', ja: '名前' })}
@@ -23,10 +23,10 @@ const ContactForm = ({ heading, richtext }) => (
 				/>
 			</label>
 
-			<label>
+			<label htmlFor="email">
 				<input
 					className="input"
-					name="email"
+					id="email" name="email"
 					type="email"
 					autoComplete="email"
 					placeholder={t({ en: 'Email', ja: 'メールアドレス' })}
@@ -34,11 +34,11 @@ const ContactForm = ({ heading, richtext }) => (
 				/>
 			</label>
 
-			<label>
+			<label htmlFor="message">
 				<textarea
 					className="input min-h-[4em]"
 					rows={3}
-					name="message"
+					id="message" name="message"
 					placeholder={t({ en: 'Message', ja: 'メッセージ' })}
 					required
 				/>
