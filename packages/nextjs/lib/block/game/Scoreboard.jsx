@@ -2,10 +2,9 @@ import css from './Scoreboard.module.css'
 import { useContext } from 'react'
 import { GlobalContext } from 'lib/store/Global'
 import Img from 'lib/img/SanityImage'
-import t from 'utils/locales'
 import { total } from 'utils/game'
 
-const Scoreboard = ({ opponent, score }) => {
+const Scoreboard = ({ opponent, order, score }) => {
 	const { site, teams } = useContext(GlobalContext)
 
 	let scores = Object.values(score.rows).map(row => row.cells)
@@ -13,6 +12,9 @@ const Scoreboard = ({ opponent, score }) => {
 	function getTeam(short) {
 		return teams.find(team => team.name.short === short)
 	}
+
+	const home = !['away', 'bat first'].includes(order) ? site.title.short : opponent.name.short
+	const away = ['away', 'bat first'].includes(order) ? site.title.short : opponent.name.short
 
 	return (
 		<div className="overflow-x-auto gradient-green p-2 <md:full-width">
@@ -36,9 +38,9 @@ const Scoreboard = ({ opponent, score }) => {
 						<tr key={index}>
 							<th>
 								<Img
-									image={getTeam(index === 0 ? site.title.short : opponent.name.short).image}
+									image={getTeam(index === 0 ? away : home).image}
 									builder={b => b.width(120).height(40)}
-									alt={index === 0 ? t(site.title.full) : opponent.name.full}
+									alt=""
 								/>
 							</th>
 							<td />

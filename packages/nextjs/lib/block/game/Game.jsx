@@ -4,9 +4,10 @@ import Scoreboard from './Scoreboard'
 import Link from 'next/link'
 import t from 'utils/locales'
 import clsx from 'clsx'
+import PT from 'lib/pt/PT'
 
 const Game = ({ className, detailsLabel, ...props }) => {
-	const { date, opponent, status, score, link } = props
+	const { date, opponent, status, score, link, notes } = props
 
 	return (
 		<article id={date} className={clsx(className, 'grid gap-4 bg-white text-j-green p-4 styled-shadow-ground')}>
@@ -36,6 +37,13 @@ const Game = ({ className, detailsLabel, ...props }) => {
 						</a>
 					</Link>
 				</p>
+			)}
+
+			{!!notes && (
+				<div>
+					<h2 className="text-ground-dark font-bold text-sm uppercase">Notes</h2>
+					<PT value={notes} />
+				</div>
 			)}
 		</article>
 	)
