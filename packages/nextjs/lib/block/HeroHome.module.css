@@ -2,9 +2,9 @@
 	display: grid;
 	place-content: center;
 	padding: 2rem;
-	height: clamp(200px, 50vh, 400px);
+	height: clamp(300px, 50vh, 400px);
 
-	@apply rounded-xl;
+	@apply rounded-xl shadow-lg;
 }
 
 .heading {
@@ -12,4 +12,13 @@
 	text-shadow: 3px 3px theme('colors.j-green-dark');
 
 	@apply mx-auto font-bold text-4xl <md:text-2xl leading-snug;
+}
+
+.img {
+	margin: -6rem auto 0;
+	object-fit: cover;
+	width: clamp(300px, 50vw, 300px);
+	transform: rotate(2deg);
+
+	@apply rounded-lg shadow-lg <md:-mt-16;
 }

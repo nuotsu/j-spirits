@@ -13,7 +13,10 @@ export async function getStaticProps({ locale }) {
 				...,
 				blocks[]{
 					...,
-					link{ ${groq.internalLink} }
+					link{ ${groq.internalLink} },
+					imageLink->{
+						'internalUrl': select(slug.current == '/'  => '/', '/' + slug.current)
+					}
 				}
 			},
 			${groq.global}

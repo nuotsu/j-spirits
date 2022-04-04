@@ -13,6 +13,7 @@ const Header = () => {
 		<header className={clsx(css.root, $open && css.open)}>
 			<div className={css.inner}>
 				<Logo />
+
 				<Links $open={$open} />
 
 				<div className={clsx(css.lang, $open && css.open)}>

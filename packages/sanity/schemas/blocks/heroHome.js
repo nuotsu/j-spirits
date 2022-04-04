@@ -12,6 +12,12 @@ export default {
 			type: 'heading',
 			initialValue: { tag: 'h1' },
 		},
+		{ name: 'image', type: 'image', },
+		{
+			name: 'imageLink',
+			type: 'reference',
+			to: [{ type: 'page' }],
+		},
 	],
 	preview: {
 		select: {

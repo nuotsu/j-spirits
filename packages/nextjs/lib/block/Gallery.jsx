@@ -1,5 +1,6 @@
 import HTag from 'lib/HTag'
 import Img from 'lib/img/SanityImage'
+import t from 'utils/locales'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, EffectCoverflow } from 'swiper'
 import 'swiper/css'
@@ -35,6 +36,8 @@ const Gallery = ({ heading, images }) => (
 							className="h-[400px] object-contain drop-shadow-xl"
 							image={image}
 							builder={b => b.height(600)}
+							title={t(image.title)}
+							alt={t(image.title)}
 						/>
 					</SwiperSlide>
 				))}

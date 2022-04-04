@@ -11,7 +11,9 @@
 	align-items: center;
 	gap: 0.5ch;
 
-	@apply font-bold text-lg text-j-green <md:px-2 <md:py-2;
+	@apply
+		font-bold text-lg text-j-green <md:px-2 <md:py-2
+		transition-colors hover:text-j-green-light;
 }
 
 .active {
