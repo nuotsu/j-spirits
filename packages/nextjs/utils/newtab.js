@@ -1,3 +1,3 @@
-export default (external = true) => external
+export default external => !!external
 	? { target: '_blank', rel: 'noopener noreferrer' }
 	: {}

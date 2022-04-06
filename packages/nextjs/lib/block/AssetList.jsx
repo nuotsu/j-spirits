@@ -19,7 +19,7 @@ const AssetList = ({ heading, richtext, assets }) => (
 						className={css.img}
 						href={urlFor(asset).url()}
 						download
-						{...newtab()}
+						{...newtab(true)}
 						title={t({ en: 'Download', ja: 'ダウンロード' })}
 					>
 						<Img

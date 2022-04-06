@@ -18,3 +18,8 @@
 .table tr:hover td {
 	@apply bg-j-green-light text-white;
 }
+
+.jersey {
+	font-feature-settings: 'tnum';
+	@apply font-bold text-j-green-light text-xl;
+}
