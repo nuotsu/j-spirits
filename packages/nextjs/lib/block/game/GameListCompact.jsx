@@ -12,9 +12,23 @@ const GameListCompact = ({ heading, link }) => {
 
 	const nextGame = upcomingGames[0]
 
+	const nextLabel = t(link.label || link.page.title)
+
 	return (
 		<section className="section-xl">
-			<HTag className="h2" {...heading} />
+			<header className="flex mb-4">
+				<HTag className="h2 mb-0 flex-grow" {...heading} />
+
+				<Link href={link.internalUrl}>
+					<a
+						className="flex items-center hover:underline text-j-green-light"
+						title={nextLabel}
+					>
+						{nextLabel}
+						<IoArrowForwardSharp />
+					</a>
+				</Link>
+			</header>
 
 			<ul className={`${css.list} no-scrollbar <md:full-width`}>
 				{!!nextGame && (
@@ -29,7 +43,7 @@ const GameListCompact = ({ heading, link }) => {
 					<Link href={link.internalUrl}>
 						<a
 							className={`${css.btn} gradient-ground`}
-							title={t(link.label || link.page.title)}
+							title={nextLabel}
 						>
 							<IoArrowForwardSharp className={css.icon} />
 						</a>
